@@ -51,8 +51,9 @@ const FAQ = () => {
 
         <div className="mt-8 text-center md:mt-12">
           <p className="mb-4 text-sm text-muted-foreground">Ainda tem dúvidas? Fale direto com a gente!</p>
-          <a href={getWhatsAppUrl("Olá! Tenho uma dúvida sobre aquecedores de piscina.")} target="_blank" rel="noopener noreferrer">
-            <Button size="lg" className="h-14 w-full gap-2 bg-secondary text-base font-bold text-secondary-foreground hover:bg-secondary/90 sm:w-auto">
+          <a href={getWhatsAppUrl("Olá! Tenho uma dúvida sobre aquecedores de piscina.")} target="_blank" rel="noopener noreferrer" className="relative inline-block w-full sm:w-auto">
+            <span className="absolute inset-0 animate-ping rounded-md bg-secondary opacity-20" />
+            <Button size="lg" className="relative h-14 w-full gap-2 bg-secondary text-base font-bold text-secondary-foreground hover:bg-secondary/90 sm:w-auto">
               <WhatsAppIcon className="h-5 w-5" />
               Tirar Minhas Dúvidas
             </Button>

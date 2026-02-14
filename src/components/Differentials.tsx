@@ -35,8 +35,9 @@ const Differentials = () => {
         </div>
 
         <div className="mt-8 text-center md:mt-12">
-          <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer">
-            <Button variant="outline" size="lg" className="h-14 w-full gap-2 border-primary text-base font-semibold text-primary hover:bg-primary hover:text-primary-foreground sm:w-auto">
+          <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer" className="relative inline-block w-full sm:w-auto">
+            <span className="absolute inset-0 animate-ping rounded-md bg-primary opacity-20" />
+            <Button variant="outline" size="lg" className="relative h-14 w-full gap-2 border-primary text-base font-semibold text-primary hover:bg-primary hover:text-primary-foreground sm:w-auto">
               <WhatsAppIcon className="h-5 w-5" />
               Falar com um Especialista
             </Button>
