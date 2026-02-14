@@ -39,10 +39,10 @@ const FAQ = () => {
         <Accordion type="single" collapsible className="w-full">
           {faqs.map((faq, i) => (
             <AccordionItem key={i} value={`item-${i}`}>
-              <AccordionTrigger className="text-left text-sm font-medium md:text-base">
+              <AccordionTrigger className="text-left text-base font-medium">
                 {faq.q}
               </AccordionTrigger>
-              <AccordionContent className="text-xs leading-relaxed text-muted-foreground md:text-sm">
+              <AccordionContent className="text-sm leading-relaxed text-muted-foreground">
                 {faq.a}
               </AccordionContent>
             </AccordionItem>
@@ -52,7 +52,7 @@ const FAQ = () => {
         <div className="mt-8 text-center md:mt-12">
           <p className="mb-4 text-sm text-muted-foreground">Ainda tem dúvidas? Fale direto com a gente!</p>
           <a href={getWhatsAppUrl("Olá! Tenho uma dúvida sobre aquecedores de piscina.")} target="_blank" rel="noopener noreferrer">
-            <Button size="lg" className="w-full gap-2 bg-secondary font-bold text-secondary-foreground hover:bg-secondary/90 sm:w-auto">
+            <Button size="lg" className="h-14 w-full gap-2 bg-secondary text-base font-bold text-secondary-foreground hover:bg-secondary/90 sm:w-auto">
               <WhatsAppIcon className="h-5 w-5" />
               Tirar Minhas Dúvidas
             </Button>
