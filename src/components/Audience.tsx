@@ -13,7 +13,7 @@ const Audience = () => {
       <div className="container mx-auto max-w-5xl">
         <div className="mb-8 text-center md:mb-14">
           <h2 className="mb-3 text-2xl font-bold text-foreground md:mb-4 md:text-4xl">
-            Para Quem É o <span className="text-secondary">Aquecimento de Piscina</span>?
+            Para quem é o <span className="text-secondary">Aquecedor Águia Hot</span>?
           </h2>
           <p className="mx-auto max-w-2xl text-base text-muted-foreground">
             Se você se identifica com algum desses perfis, temos a solução ideal para você.
