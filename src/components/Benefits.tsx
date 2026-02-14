@@ -1,4 +1,4 @@
-import { Zap, ThermometerSun, TrendingUp, Leaf } from "lucide-react";
+import { Zap, ThermometerSun, TrendingUp, Leaf, Wifi, Volume2, Cpu } from "lucide-react";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -6,9 +6,19 @@ import { getWhatsAppUrl } from "@/lib/whatsapp";
 
 const benefits = [
   {
-    icon: Zap,
-    title: "Economia com Inverter",
-    description: "Tecnologia que reduz o consumo de energia em até 80% comparado aos aquecedores tradicionais.",
+    icon: Cpu,
+    title: "Full Inverter",
+    description: "Tecnologia 100% inverter para máxima eficiência energética, reduzindo o consumo em até 80%.",
+  },
+  {
+    icon: Wifi,
+    title: "Controle por Wi-Fi",
+    description: "Controle a temperatura da sua piscina de qualquer lugar pelo celular, com total praticidade.",
+  },
+  {
+    icon: Volume2,
+    title: "Super Silencioso",
+    description: "Funcionamento ultrasilencioso que não perturba o ambiente da sua casa ou vizinhança.",
   },
   {
     icon: ThermometerSun,
@@ -40,7 +50,7 @@ const Benefits = () => {
           </p>
         </div>
 
-        <div className="grid gap-6 sm:grid-cols-2">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {benefits.map((b) => (
             <Card key={b.title} className="border-none shadow-md transition-shadow hover:shadow-lg">
               <CardContent className="flex gap-4 p-6">
