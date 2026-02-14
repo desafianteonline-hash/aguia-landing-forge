@@ -15,7 +15,7 @@ const Audience = () => {
           <h2 className="mb-3 text-2xl font-bold text-foreground md:mb-4 md:text-4xl">
             Para Quem É o <span className="text-secondary">Aquecimento de Piscina</span>?
           </h2>
-          <p className="mx-auto max-w-2xl text-sm text-muted-foreground md:text-base">
+          <p className="mx-auto max-w-2xl text-base text-muted-foreground">
             Se você se identifica com algum desses perfis, temos a solução ideal para você.
           </p>
         </div>
@@ -26,8 +26,8 @@ const Audience = () => {
               <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-xl bg-primary md:mb-4 md:h-16 md:w-16 md:rounded-2xl">
                 <p.icon className="h-6 w-6 text-primary-foreground md:h-8 md:w-8" />
               </div>
-              <h3 className="mb-1 text-sm font-semibold text-foreground md:mb-2 md:text-lg">{p.title}</h3>
-              <p className="text-xs leading-relaxed text-muted-foreground md:text-sm">{p.description}</p>
+              <h3 className="mb-1 text-base font-semibold text-foreground md:mb-2 md:text-lg">{p.title}</h3>
+              <p className="text-sm leading-relaxed text-muted-foreground">{p.description}</p>
             </div>
           ))}
         </div>

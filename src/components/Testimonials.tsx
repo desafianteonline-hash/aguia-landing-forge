@@ -27,7 +27,7 @@ const Testimonials = () => {
           <h2 className="mb-3 text-2xl font-bold text-primary-foreground md:mb-4 md:text-4xl">
             O Que Nossos Clientes Dizem
           </h2>
-          <p className="mx-auto max-w-2xl text-sm text-primary-foreground/70 md:text-base">
+          <p className="mx-auto max-w-2xl text-base text-primary-foreground/70">
             Depoimentos reais de quem já investiu em conforto e economia.
           </p>
         </div>
@@ -41,7 +41,7 @@ const Testimonials = () => {
                     <Star key={i} className="h-3.5 w-3.5 fill-secondary text-secondary md:h-4 md:w-4" />
                   ))}
                 </div>
-                <p className="mb-4 text-xs leading-relaxed text-primary-foreground/90 md:text-sm">"{t.text}"</p>
+                <p className="mb-4 text-sm leading-relaxed text-primary-foreground/90">"{t.text}"</p>
                 <div>
                   <p className="text-sm font-semibold text-primary-foreground md:text-base">{t.name}</p>
                   <p className="text-xs text-primary-foreground/60">{t.location}</p>

@@ -22,13 +22,13 @@ const Differentials = () => {
 
         <div className="grid gap-4 sm:grid-cols-2 md:gap-6">
           {items.map((item) => (
-            <div key={item.title} className="flex gap-3 rounded-xl bg-card p-4 shadow-sm md:gap-4 md:p-6">
-              <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-secondary/20 md:h-10 md:w-10">
-                <item.icon className="h-4 w-4 text-secondary md:h-5 md:w-5" />
+            <div key={item.title} className="flex gap-3 rounded-xl bg-card p-5 shadow-sm md:gap-4 md:p-6">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-secondary/20 md:h-10 md:w-10">
+                <item.icon className="h-5 w-5 text-secondary" />
               </div>
               <div>
-                <h3 className="mb-1 text-sm font-semibold text-foreground md:text-base">{item.title}</h3>
-                <p className="text-xs text-muted-foreground md:text-sm">{item.description}</p>
+                <h3 className="mb-1 text-base font-semibold text-foreground">{item.title}</h3>
+                <p className="text-sm text-muted-foreground">{item.description}</p>
               </div>
             </div>
           ))}
@@ -36,7 +36,7 @@ const Differentials = () => {
 
         <div className="mt-8 text-center md:mt-12">
           <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer">
-            <Button variant="outline" size="lg" className="w-full gap-2 border-primary font-semibold text-primary hover:bg-primary hover:text-primary-foreground sm:w-auto">
+            <Button variant="outline" size="lg" className="h-14 w-full gap-2 border-primary text-base font-semibold text-primary hover:bg-primary hover:text-primary-foreground sm:w-auto">
               <WhatsAppIcon className="h-5 w-5" />
               Falar com um Especialista
             </Button>

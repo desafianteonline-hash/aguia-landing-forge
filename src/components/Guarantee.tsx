@@ -15,12 +15,12 @@ const Guarantee = () => {
           Sua Satisfação é Nossa <span className="text-secondary">Garantia</span>
         </h2>
 
-        <p className="mx-auto mb-6 max-w-xl text-sm leading-relaxed text-muted-foreground md:mb-8 md:text-base">
+        <p className="mx-auto mb-6 max-w-xl text-base leading-relaxed text-muted-foreground md:mb-8">
           Trabalhamos apenas com equipamentos de alta qualidade e oferecemos <strong className="text-foreground">2 anos de garantia</strong>, instalação profissional e suporte com atendimento rápido. Seu investimento está protegido do início ao fim.
         </p>
 
         <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer">
-          <Button size="lg" className="w-full gap-2 bg-secondary font-bold text-secondary-foreground hover:bg-secondary/90 sm:w-auto">
+          <Button size="lg" className="h-14 w-full gap-2 bg-secondary text-base font-bold text-secondary-foreground hover:bg-secondary/90 sm:w-auto">
             <WhatsAppIcon className="h-5 w-5" />
             Garantir Meu Orçamento
           </Button>
