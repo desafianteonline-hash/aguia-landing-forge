@@ -1,5 +1,7 @@
 import { ShieldCheck, Wrench, Headphones, Award } from "lucide-react";
-import WhatsAppCTAButton from "@/components/WhatsAppCTAButton";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
+import { Button } from "@/components/ui/button";
+import { getWhatsAppUrl } from "@/lib/whatsapp";
 
 const items = [
   { icon: ShieldCheck, title: "Garantia de 2 Anos", description: "Todos os equipamentos com 2 anos de garantia para sua total segurança." },
@@ -33,9 +35,12 @@ const Differentials = () => {
         </div>
 
         <div className="mt-12 text-center">
-          <WhatsAppCTAButton>
-            Falar com um Especialista
-          </WhatsAppCTAButton>
+          <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer">
+            <Button variant="outline" size="lg" className="gap-2 border-primary font-semibold text-primary hover:bg-primary hover:text-primary-foreground">
+              <WhatsAppIcon className="h-5 w-5" />
+              Falar com um Especialista
+            </Button>
+          </a>
         </div>
       </div>
     </section>

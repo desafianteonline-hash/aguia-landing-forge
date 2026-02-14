@@ -1,4 +1,6 @@
-import WhatsAppCTAButton from "@/components/WhatsAppCTAButton";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
+import { Button } from "@/components/ui/button";
+import { getWhatsAppUrl } from "@/lib/whatsapp";
 
 const CTAFinal = () => {
   return (
@@ -14,9 +16,12 @@ const CTAFinal = () => {
           Solicite agora seu orçamento gratuito e sem compromisso. Nossa equipe responde rapidamente pelo WhatsApp.
         </p>
 
-        <WhatsAppCTAButton>
-          Solicitar Orçamento Grátis
-        </WhatsAppCTAButton>
+        <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer">
+          <Button size="lg" className="h-16 gap-3 bg-secondary px-10 text-lg font-bold text-secondary-foreground shadow-xl hover:bg-secondary/90">
+            <WhatsAppIcon className="h-6 w-6" />
+            Solicitar Orçamento Grátis
+          </Button>
+        </a>
 
         <p className="mt-4 text-sm text-primary-foreground/50">
           Atendimento de segunda a sábado • Resposta rápida

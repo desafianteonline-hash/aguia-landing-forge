@@ -1,5 +1,7 @@
 import { Droplets } from "lucide-react";
-import WhatsAppCTAButton from "@/components/WhatsAppCTAButton";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
+import { Button } from "@/components/ui/button";
+import { getWhatsAppUrl } from "@/lib/whatsapp";
 import heroImage from "@/assets/hero-pool.jpg";
 
 const Hero = () => {
@@ -33,9 +35,12 @@ const Hero = () => {
             Aquecedores de piscina com tecnologia inverter que garantem conforto térmico e economia real na sua conta de energia.
           </p>
 
-          <WhatsAppCTAButton>
-            Solicitar Orçamento Grátis
-          </WhatsAppCTAButton>
+          <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer">
+            <Button size="lg" className="h-14 gap-3 bg-secondary px-8 text-base font-bold text-secondary-foreground shadow-lg hover:bg-secondary/90 md:h-16 md:px-10 md:text-lg">
+              <WhatsAppIcon className="h-5 w-5 md:h-6 md:w-6" />
+              Solicitar Orçamento Grátis
+            </Button>
+          </a>
 
           <p className="mt-4 text-sm text-primary-foreground/60">
             Resposta rápida pelo WhatsApp • Sem compromisso

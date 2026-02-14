@@ -1,5 +1,7 @@
 import { ShieldCheck } from "lucide-react";
-import WhatsAppCTAButton from "@/components/WhatsAppCTAButton";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
+import { Button } from "@/components/ui/button";
+import { getWhatsAppUrl } from "@/lib/whatsapp";
 
 const Guarantee = () => {
   return (
@@ -17,9 +19,12 @@ const Guarantee = () => {
           Trabalhamos apenas com equipamentos de alta qualidade e oferecemos <strong className="text-foreground">2 anos de garantia</strong>, instalação profissional e suporte com atendimento rápido. Seu investimento está protegido do início ao fim.
         </p>
 
-        <WhatsAppCTAButton>
-          Garantir Meu Orçamento
-        </WhatsAppCTAButton>
+        <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer">
+          <Button size="lg" className="gap-2 bg-secondary font-bold text-secondary-foreground hover:bg-secondary/90">
+            <WhatsAppIcon className="h-5 w-5" />
+            Garantir Meu Orçamento
+          </Button>
+        </a>
       </div>
     </section>
   );

@@ -1,5 +1,7 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import WhatsAppCTAButton from "@/components/WhatsAppCTAButton";
+import { Button } from "@/components/ui/button";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
+import { getWhatsAppUrl } from "@/lib/whatsapp";
 
 const faqs = [
   {
@@ -49,9 +51,12 @@ const FAQ = () => {
 
         <div className="mt-12 text-center">
           <p className="mb-4 text-muted-foreground">Ainda tem dúvidas? Fale direto com a gente!</p>
-          <WhatsAppCTAButton message="Olá! Tenho uma dúvida sobre aquecedores de piscina.">
-            Tirar Minhas Dúvidas
-          </WhatsAppCTAButton>
+          <a href={getWhatsAppUrl("Olá! Tenho uma dúvida sobre aquecedores de piscina.")} target="_blank" rel="noopener noreferrer">
+            <Button size="lg" className="gap-2 bg-secondary font-bold text-secondary-foreground hover:bg-secondary/90">
+              <WhatsAppIcon className="h-5 w-5" />
+              Tirar Minhas Dúvidas
+            </Button>
+          </a>
         </div>
       </div>
     </section>
