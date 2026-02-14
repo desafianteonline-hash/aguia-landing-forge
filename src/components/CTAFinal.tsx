@@ -1,4 +1,4 @@
-import { MessageCircle } from "lucide-react";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { Button } from "@/components/ui/button";
 import { getWhatsAppUrl } from "@/lib/whatsapp";
 
@@ -18,7 +18,7 @@ const CTAFinal = () => {
 
         <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer">
           <Button size="lg" className="h-16 gap-3 bg-secondary px-10 text-lg font-bold text-secondary-foreground shadow-xl hover:bg-secondary/90">
-            <MessageCircle className="h-6 w-6" />
+            <WhatsAppIcon className="h-6 w-6" />
             Solicitar Orçamento Grátis
           </Button>
         </a>
