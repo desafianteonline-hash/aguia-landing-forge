@@ -43,7 +43,7 @@ const Benefits = () => {
       <div className="container mx-auto max-w-5xl">
         <div className="mb-8 text-center md:mb-14">
           <h2 className="mb-3 text-2xl font-bold text-foreground md:mb-4 md:text-4xl">
-            Por Que Escolher a <span className="text-secondary">Águia Hot</span>?
+            Por Que Escolher um Aquecedor <span className="text-secondary">Águia Hot</span>?
           </h2>
           <p className="mx-auto max-w-2xl text-base text-muted-foreground md:text-base">
             Tecnologia de ponta para máximo conforto com o menor custo operacional.
