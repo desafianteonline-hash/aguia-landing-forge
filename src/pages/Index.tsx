@@ -1,3 +1,4 @@
+import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Benefits from "@/components/Benefits";
 import Services from "@/components/Services";
@@ -13,6 +14,7 @@ import WhatsAppFloat from "@/components/WhatsAppFloat";
 const Index = () => {
   return (
     <main>
+      <Navbar />
       <Hero />
       <Benefits />
       <Services />
