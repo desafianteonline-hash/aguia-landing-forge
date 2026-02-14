@@ -32,7 +32,7 @@ const Hero = () => {
             <span className="text-secondary">o Ano Inteiro</span>
           </h1>
 
-          <p className="mb-8 max-w-xl text-base text-primary-foreground/80 md:mb-10 md:text-xl">
+          <p className="mb-8 max-w-xl text-base text-primary-foreground md:mb-10 md:text-xl">
             Aquecedores de piscina com tecnologia inverter que garantem conforto térmico e economia real na sua conta de energia.
           </p>
 
