@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { Bird, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import eagleLogo from "@/assets/eagle-logo.png";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { Button } from "@/components/ui/button";
 import { getWhatsAppUrl } from "@/lib/whatsapp";
@@ -43,7 +44,7 @@ const Navbar = () => {
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:py-4">
           <a href="#" className="flex items-center gap-2">
             <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-secondary md:h-10 md:w-10">
-              <Bird className="h-5 w-5 text-secondary-foreground md:h-6 md:w-6" />
+              <img src={eagleLogo} alt="Águia Hot logo" className="h-7 w-7 object-contain md:h-8 md:w-8" />
             </div>
             <span
               className={`text-lg font-extrabold tracking-tight md:text-xl transition-colors duration-300 ${
