@@ -15,7 +15,6 @@ const Footer = () => {
             <ul className="space-y-1 text-xs md:text-sm">
               <li>Razão Social: Aguia Hot LTDA</li>
               <li>CNPJ: 46.589.415/0001-43</li>
-              <li>IE PE: 1219767-00</li>
             </ul>
           </div>
 
@@ -23,7 +22,9 @@ const Footer = () => {
             <h4 className="mb-2 text-sm font-semibold text-background md:mb-3">Contato</h4>
             <ul className="space-y-1 text-xs md:text-sm">
               <li>WhatsApp: (81) 9 9941-4376</li>
-              <li>Pernambuco, Brasil</li>
+              <li>Trav. Valdemar Regis, 50</li>
+              <li>Nossa Senhora das Graças, Gravatá-PE</li>
+              <li>CEP: 55.642-671</li>
             </ul>
           </div>
         </div>
