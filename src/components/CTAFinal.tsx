@@ -16,8 +16,9 @@ const CTAFinal = () => {
           Solicite agora seu orçamento gratuito e sem compromisso. Nossa equipe responde rapidamente pelo WhatsApp.
         </p>
 
-        <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer">
-          <Button size="lg" className="h-14 w-full gap-2 bg-secondary px-8 text-base font-bold text-secondary-foreground shadow-xl hover:bg-secondary/90 sm:w-auto md:h-16 md:gap-3 md:px-10 md:text-lg">
+        <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer" className="relative inline-block w-full sm:w-auto">
+          <span className="absolute inset-0 animate-ping rounded-md bg-secondary opacity-20" />
+          <Button size="lg" className="relative h-14 w-full gap-2 bg-secondary px-8 text-base font-bold text-secondary-foreground shadow-xl hover:bg-secondary/90 sm:w-auto md:h-16 md:gap-3 md:px-10 md:text-lg">
             <WhatsAppIcon className="h-5 w-5 md:h-6 md:w-6" />
             Solicitar Orçamento Grátis
           </Button>
