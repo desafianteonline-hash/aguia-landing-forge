@@ -1,5 +1,5 @@
-const WHATSAPP_NUMBER = "5581999999999"; // Replace with actual number
-const WHATSAPP_MESSAGE = encodeURIComponent("Olá! Gostaria de solicitar um orçamento para aquecedor de piscina.");
+const WHATSAPP_NUMBER = "5581999414376";
+const WHATSAPP_MESSAGE = encodeURIComponent("Gostaria de um orçamento 😊");
 
 export const getWhatsAppUrl = (message?: string) => {
   const msg = message ? encodeURIComponent(message) : WHATSAPP_MESSAGE;
