@@ -34,13 +34,13 @@ const Navbar = () => {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-50 overflow-visible transition-all duration-300 ${
           scrolled || mobileOpen
             ? "bg-[#ffffff] shadow-lg"
             : "bg-transparent"
         }`}
       >
-        <div className="container mx-auto flex max-w-6xl items-center justify-between px-5 py-3 md:px-4 md:py-4">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:py-4">
           <a href="#" className="flex items-center gap-2">
             <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-secondary md:h-10 md:w-10">
               <Flame className="h-5 w-5 text-secondary-foreground md:h-6 md:w-6" />
@@ -77,11 +77,11 @@ const Navbar = () => {
             </a>
           </div>
 
-          <div className="flex items-center gap-3 md:hidden">
+          <div className="flex shrink-0 items-center gap-2 md:hidden">
             <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer">
-              <Button size="sm" className="h-9 gap-1.5 bg-secondary px-3 text-xs font-bold text-secondary-foreground hover:bg-secondary/90">
-                <WhatsAppIcon className="h-3.5 w-3.5" />
-                Orçamento
+              <Button size="sm" className="h-9 shrink-0 gap-1.5 bg-secondary px-3 text-xs font-bold text-secondary-foreground hover:bg-secondary/90">
+                <WhatsAppIcon className="h-3.5 w-3.5 shrink-0" />
+                <span className="whitespace-nowrap">Orçamento</span>
               </Button>
             </a>
             <button
