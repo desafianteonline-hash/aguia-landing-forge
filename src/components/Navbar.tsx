@@ -14,6 +14,21 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Close mobile menu on resize to desktop
+  useEffect(() => {
+    const onResize = () => {
+      if (window.innerWidth >= 768) setMobileOpen(false);
+    };
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
+
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    document.body.style.overflow = mobileOpen ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
+  }, [mobileOpen]);
+
   const links = [
     { label: "Serviços", href: "#servicos" },
     { label: "Diferenciais", href: "#diferenciais" },
@@ -24,7 +39,7 @@ const Navbar = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
+        scrolled || mobileOpen
           ? "bg-background/95 shadow-lg backdrop-blur-md"
           : "bg-transparent"
       }`}
@@ -36,8 +51,8 @@ const Navbar = () => {
             <Flame className="h-5 w-5 text-secondary-foreground md:h-6 md:w-6" />
           </div>
           <span
-            className={`text-lg font-extrabold tracking-tight md:text-xl ${
-              scrolled ? "text-foreground" : "text-primary-foreground"
+            className={`text-lg font-extrabold tracking-tight md:text-xl transition-colors duration-300 ${
+              scrolled || mobileOpen ? "text-foreground" : "text-primary-foreground"
             }`}
           >
             Águia <span className="text-secondary">Hot</span>
@@ -69,45 +84,63 @@ const Navbar = () => {
           </a>
         </div>
 
-        {/* Mobile hamburger */}
-        <button
-          onClick={() => setMobileOpen(!mobileOpen)}
-          className={`md:hidden ${scrolled ? "text-foreground" : "text-primary-foreground"}`}
-          aria-label="Abrir menu"
-        >
-          {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-        </button>
+        {/* Mobile: CTA mini + hamburger */}
+        <div className="flex items-center gap-3 md:hidden">
+          <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer">
+            <Button size="sm" className="h-9 gap-1.5 bg-secondary px-3 text-xs font-bold text-secondary-foreground hover:bg-secondary/90">
+              <WhatsAppIcon className="h-3.5 w-3.5" />
+              Orçamento
+            </Button>
+          </a>
+          <button
+            onClick={() => setMobileOpen(!mobileOpen)}
+            className={`transition-colors duration-300 ${scrolled || mobileOpen ? "text-foreground" : "text-primary-foreground"}`}
+            aria-label={mobileOpen ? "Fechar menu" : "Abrir menu"}
+          >
+            {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
+        </div>
       </div>
 
-      {/* Mobile menu */}
-      {mobileOpen && (
-        <div className="absolute left-0 right-0 top-full z-50 border-b border-border bg-background shadow-xl md:hidden">
-          <nav className="container mx-auto flex flex-col gap-1 px-5 py-4">
-            {links.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                onClick={() => setMobileOpen(false)}
-                className="rounded-lg px-4 py-3 text-base font-medium text-foreground transition-colors hover:bg-muted"
-              >
-                {link.label}
-              </a>
-            ))}
+      {/* Mobile menu - full screen overlay */}
+      <div
+        className={`fixed inset-0 top-[57px] z-50 bg-background transition-all duration-300 md:hidden ${
+          mobileOpen
+            ? "pointer-events-auto opacity-100 translate-y-0"
+            : "pointer-events-none opacity-0 -translate-y-4"
+        }`}
+      >
+        <nav className="flex flex-col gap-2 px-5 py-6">
+          {links.map((link, i) => (
+            <a
+              key={link.href}
+              href={link.href}
+              onClick={() => setMobileOpen(false)}
+              className="rounded-xl px-4 py-4 text-lg font-semibold text-foreground transition-colors hover:bg-muted active:bg-muted"
+              style={{ animationDelay: `${i * 50}ms` }}
+            >
+              {link.label}
+            </a>
+          ))}
+
+          <div className="mt-4 border-t border-border pt-6">
             <a
               href={getWhatsAppUrl()}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-2"
               onClick={() => setMobileOpen(false)}
             >
-              <Button className="w-full gap-2 bg-secondary font-bold text-secondary-foreground hover:bg-secondary/90">
-                <WhatsAppIcon className="h-4 w-4" />
-                Orçamento Grátis
+              <Button className="h-14 w-full gap-2 bg-secondary text-base font-bold text-secondary-foreground hover:bg-secondary/90">
+                <WhatsAppIcon className="h-5 w-5" />
+                Solicitar Orçamento Grátis
               </Button>
             </a>
-          </nav>
-        </div>
-      )}
+            <p className="mt-3 text-center text-sm text-muted-foreground">
+              Resposta rápida pelo WhatsApp
+            </p>
+          </div>
+        </nav>
+      </div>
     </header>
   );
 };
