@@ -28,10 +28,10 @@ const faqs = [
 
 const FAQ = () => {
   return (
-    <section id="faq" className="px-4 py-20 md:py-28">
+    <section id="faq" className="px-5 py-14 md:px-4 md:py-28">
       <div className="container mx-auto max-w-3xl">
-        <div className="mb-14 text-center">
-          <h2 className="mb-4 text-3xl font-bold text-foreground md:text-4xl">
+        <div className="mb-8 text-center md:mb-14">
+          <h2 className="mb-3 text-2xl font-bold text-foreground md:mb-4 md:text-4xl">
             Perguntas <span className="text-secondary">Frequentes</span>
           </h2>
         </div>
@@ -39,20 +39,20 @@ const FAQ = () => {
         <Accordion type="single" collapsible className="w-full">
           {faqs.map((faq, i) => (
             <AccordionItem key={i} value={`item-${i}`}>
-              <AccordionTrigger className="text-left text-base font-medium">
+              <AccordionTrigger className="text-left text-sm font-medium md:text-base">
                 {faq.q}
               </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground leading-relaxed">
+              <AccordionContent className="text-xs leading-relaxed text-muted-foreground md:text-sm">
                 {faq.a}
               </AccordionContent>
             </AccordionItem>
           ))}
         </Accordion>
 
-        <div className="mt-12 text-center">
-          <p className="mb-4 text-muted-foreground">Ainda tem dúvidas? Fale direto com a gente!</p>
+        <div className="mt-8 text-center md:mt-12">
+          <p className="mb-4 text-sm text-muted-foreground">Ainda tem dúvidas? Fale direto com a gente!</p>
           <a href={getWhatsAppUrl("Olá! Tenho uma dúvida sobre aquecedores de piscina.")} target="_blank" rel="noopener noreferrer">
-            <Button size="lg" className="gap-2 bg-secondary font-bold text-secondary-foreground hover:bg-secondary/90">
+            <Button size="lg" className="w-full gap-2 bg-secondary font-bold text-secondary-foreground hover:bg-secondary/90 sm:w-auto">
               <WhatsAppIcon className="h-5 w-5" />
               Tirar Minhas Dúvidas
             </Button>

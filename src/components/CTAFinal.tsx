@@ -4,26 +4,26 @@ import { getWhatsAppUrl } from "@/lib/whatsapp";
 
 const CTAFinal = () => {
   return (
-    <section className="bg-primary px-4 py-20 md:py-28">
+    <section className="bg-primary px-5 py-14 md:px-4 md:py-28">
       <div className="container mx-auto max-w-3xl text-center">
-        <h2 className="mb-4 text-3xl font-bold text-primary-foreground md:text-4xl lg:text-5xl">
+        <h2 className="mb-3 text-2xl font-bold text-primary-foreground md:mb-4 md:text-4xl lg:text-5xl">
           Pronto Para Ter Sua Piscina
           <br />
           <span className="text-secondary">Aquecida o Ano Todo?</span>
         </h2>
 
-        <p className="mx-auto mb-10 max-w-xl text-lg text-primary-foreground/80">
+        <p className="mx-auto mb-8 max-w-xl text-sm text-primary-foreground/80 md:mb-10 md:text-lg">
           Solicite agora seu orçamento gratuito e sem compromisso. Nossa equipe responde rapidamente pelo WhatsApp.
         </p>
 
         <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer">
-          <Button size="lg" className="h-16 gap-3 bg-secondary px-10 text-lg font-bold text-secondary-foreground shadow-xl hover:bg-secondary/90">
-            <WhatsAppIcon className="h-6 w-6" />
+          <Button size="lg" className="h-14 w-full gap-2 bg-secondary px-8 text-base font-bold text-secondary-foreground shadow-xl hover:bg-secondary/90 sm:w-auto md:h-16 md:gap-3 md:px-10 md:text-lg">
+            <WhatsAppIcon className="h-5 w-5 md:h-6 md:w-6" />
             Solicitar Orçamento Grátis
           </Button>
         </a>
 
-        <p className="mt-4 text-sm text-primary-foreground/50">
+        <p className="mt-3 text-xs text-primary-foreground/50 md:mt-4 md:text-sm">
           Atendimento de segunda a sábado • Resposta rápida
         </p>
       </div>

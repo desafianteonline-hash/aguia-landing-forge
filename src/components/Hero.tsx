@@ -6,7 +6,7 @@ import heroImage from "@/assets/hero-pool.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[90vh] overflow-hidden">
+    <section className="relative min-h-[80vh] overflow-hidden md:min-h-[90vh]">
       {/* Background image */}
       <div className="absolute inset-0">
         <img
@@ -15,34 +15,34 @@ const Hero = () => {
           className="h-full w-full object-cover"
           loading="eager"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-primary/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-primary/50 md:from-primary/90 md:via-primary/70 md:to-primary/40" />
       </div>
 
-      <div className="container relative mx-auto flex min-h-[90vh] max-w-5xl items-center px-4 py-20">
+      <div className="container relative mx-auto flex min-h-[80vh] max-w-5xl items-center px-5 py-16 md:min-h-[90vh] md:px-4 md:py-20">
         <div className="max-w-2xl">
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-secondary/30 bg-secondary/10 px-4 py-2 text-sm font-medium text-secondary backdrop-blur-sm">
-            <Droplets className="h-4 w-4" />
+          <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-secondary/30 bg-secondary/10 px-3 py-1.5 text-xs font-medium text-secondary backdrop-blur-sm md:mb-6 md:px-4 md:py-2 md:text-sm">
+            <Droplets className="h-3.5 w-3.5 md:h-4 md:w-4" />
             Tecnologia Inverter — Economia de até 80%
           </div>
 
-          <h1 className="mb-6 text-4xl font-extrabold leading-tight tracking-tight text-primary-foreground md:text-5xl lg:text-6xl">
+          <h1 className="mb-4 text-3xl font-extrabold leading-tight tracking-tight text-primary-foreground md:mb-6 md:text-5xl lg:text-6xl">
             Sua Piscina Aquecida
             <br />
             <span className="text-secondary">o Ano Inteiro</span>
           </h1>
 
-          <p className="mb-10 max-w-xl text-lg text-primary-foreground/80 md:text-xl">
+          <p className="mb-8 max-w-xl text-base text-primary-foreground/80 md:mb-10 md:text-xl">
             Aquecedores de piscina com tecnologia inverter que garantem conforto térmico e economia real na sua conta de energia.
           </p>
 
           <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer">
-            <Button size="lg" className="h-14 gap-3 bg-secondary px-8 text-base font-bold text-secondary-foreground shadow-lg hover:bg-secondary/90 md:h-16 md:px-10 md:text-lg">
+            <Button size="lg" className="h-12 gap-2 bg-secondary px-6 text-sm font-bold text-secondary-foreground shadow-lg hover:bg-secondary/90 md:h-16 md:gap-3 md:px-10 md:text-lg">
               <WhatsAppIcon className="h-5 w-5 md:h-6 md:w-6" />
               Solicitar Orçamento Grátis
             </Button>
           </a>
 
-          <p className="mt-4 text-sm text-primary-foreground/60">
+          <p className="mt-3 text-xs text-primary-foreground/60 md:mt-4 md:text-sm">
             Resposta rápida pelo WhatsApp • Sem compromisso
           </p>
         </div>
