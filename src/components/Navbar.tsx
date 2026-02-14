@@ -40,7 +40,7 @@ const Navbar = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled || mobileOpen
-          ? "bg-background/95 shadow-lg backdrop-blur-md"
+          ? "bg-background shadow-lg backdrop-blur-md"
           : "bg-transparent"
       }`}
     >
@@ -104,13 +104,13 @@ const Navbar = () => {
 
       {/* Mobile menu - full screen overlay */}
       <div
-        className={`fixed inset-0 top-[57px] z-50 bg-background transition-all duration-300 md:hidden ${
+        className={`fixed inset-0 top-[57px] z-50 transition-all duration-300 md:hidden ${
           mobileOpen
             ? "pointer-events-auto opacity-100 translate-y-0"
             : "pointer-events-none opacity-0 -translate-y-4"
         }`}
       >
-        <nav className="flex flex-col gap-2 px-5 py-6">
+        <nav className="flex h-full flex-col gap-2 bg-background px-5 py-6">
           {links.map((link, i) => (
             <a
               key={link.href}
