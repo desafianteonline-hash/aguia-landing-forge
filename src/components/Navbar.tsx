@@ -103,14 +103,12 @@ const Navbar = () => {
       </div>
 
       {/* Mobile menu - full screen overlay */}
-      <div
-        className={`fixed inset-0 top-[57px] z-50 transition-all duration-300 md:hidden ${
-          mobileOpen
-            ? "pointer-events-auto opacity-100 translate-y-0"
-            : "pointer-events-none opacity-0 -translate-y-4"
-        }`}
-      >
-        <nav className="flex h-full flex-col gap-2 bg-background px-5 py-6">
+      {mobileOpen && (
+        <div
+          className="fixed inset-0 top-[57px] z-50 overflow-y-auto bg-white md:hidden"
+          style={{ backgroundColor: 'hsl(var(--background))' }}
+        >
+          <nav className="flex min-h-full flex-col gap-2 px-5 py-6">
           {links.map((link, i) => (
             <a
               key={link.href}
@@ -140,7 +138,8 @@ const Navbar = () => {
             </p>
           </div>
         </nav>
-      </div>
+        </div>
+      )}
     </header>
   );
 };
