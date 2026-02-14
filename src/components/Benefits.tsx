@@ -39,36 +39,36 @@ const benefits = [
 
 const Benefits = () => {
   return (
-    <section id="beneficios" className="bg-muted px-4 py-20 md:py-28">
+    <section id="beneficios" className="bg-muted px-5 py-14 md:px-4 md:py-28">
       <div className="container mx-auto max-w-5xl">
-        <div className="mb-14 text-center">
-          <h2 className="mb-4 text-3xl font-bold text-foreground md:text-4xl">
+        <div className="mb-8 text-center md:mb-14">
+          <h2 className="mb-3 text-2xl font-bold text-foreground md:mb-4 md:text-4xl">
             Por Que Escolher um Aquecedor <span className="text-secondary">Inverter</span>?
           </h2>
-          <p className="mx-auto max-w-2xl text-muted-foreground">
+          <p className="mx-auto max-w-2xl text-sm text-muted-foreground md:text-base">
             Tecnologia de ponta para máximo conforto com o menor custo operacional.
           </p>
         </div>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-4 sm:grid-cols-2 md:gap-6 lg:grid-cols-3">
           {benefits.map((b) => (
             <Card key={b.title} className="border-none shadow-md transition-shadow hover:shadow-lg">
-              <CardContent className="flex gap-4 p-6">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-primary/10">
-                  <b.icon className="h-6 w-6 text-primary" />
+              <CardContent className="flex gap-3 p-4 md:gap-4 md:p-6">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 md:h-12 md:w-12">
+                  <b.icon className="h-5 w-5 text-primary md:h-6 md:w-6" />
                 </div>
                 <div>
-                  <h3 className="mb-1 text-lg font-semibold text-foreground">{b.title}</h3>
-                  <p className="text-sm leading-relaxed text-muted-foreground">{b.description}</p>
+                  <h3 className="mb-1 text-base font-semibold text-foreground md:text-lg">{b.title}</h3>
+                  <p className="text-xs leading-relaxed text-muted-foreground md:text-sm">{b.description}</p>
                 </div>
               </CardContent>
             </Card>
           ))}
         </div>
 
-        <div className="mt-12 text-center">
+        <div className="mt-8 text-center md:mt-12">
           <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer">
-            <Button size="lg" className="gap-2 bg-secondary font-bold text-secondary-foreground hover:bg-secondary/90">
+            <Button size="lg" className="w-full gap-2 bg-secondary font-bold text-secondary-foreground hover:bg-secondary/90 sm:w-auto">
               <WhatsAppIcon className="h-5 w-5" />
               Quero Economizar — Falar no WhatsApp
             </Button>
