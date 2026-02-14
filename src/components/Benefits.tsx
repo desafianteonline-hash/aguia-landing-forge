@@ -68,7 +68,7 @@ const Benefits = () => {
 
         <div className="mt-8 text-center md:mt-12">
           <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer">
-            <Button size="lg" className="h-14 w-full gap-2 bg-secondary text-base font-bold text-secondary-foreground hover:bg-secondary/90 sm:w-auto">
+            <Button size="lg" className="h-auto min-h-14 w-full gap-2 whitespace-normal bg-secondary px-6 py-4 text-base font-bold text-secondary-foreground hover:bg-secondary/90 sm:w-auto">
               <WhatsAppIcon className="h-5 w-5" />
               Quero Economizar — Falar no WhatsApp
             </Button>
