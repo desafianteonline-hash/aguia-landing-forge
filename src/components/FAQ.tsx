@@ -18,7 +18,7 @@ const faqs = [
   },
   {
     q: "Qual a garantia do equipamento?",
-    a: "Os equipamentos possuem garantia de fábrica que varia de 1 a 5 anos conforme o modelo. Além disso, oferecemos suporte técnico contínuo.",
+    a: "Oferecemos 2 anos de garantia em todos os equipamentos, além de suporte técnico com atendimento rápido para qualquer necessidade.",
   },
   {
     q: "Preciso de alguma adaptação na minha piscina?",
