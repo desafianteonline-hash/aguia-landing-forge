@@ -1,20 +1,26 @@
 import { Star } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import avatarCarlos from "@/assets/testimonial-carlos.jpg";
+import avatarFernanda from "@/assets/testimonial-fernanda.jpg";
+import avatarRoberto from "@/assets/testimonial-roberto.jpg";
 
 const testimonials = [
   {
     name: "Carlos M.",
     location: "Recife, PE",
+    avatar: avatarCarlos,
     text: "Instalamos o aquecedor inverter e a diferença é absurda. A piscina está sempre agradável e a conta de luz quase não mudou. Super recomendo!",
   },
   {
     name: "Fernanda S.",
     location: "Jaboatão dos Guararapes, PE",
+    avatar: avatarFernanda,
     text: "Atendimento excelente desde o orçamento até a instalação. A equipe é muito profissional e o produto funciona perfeitamente.",
   },
   {
     name: "Roberto A.",
     location: "Olinda, PE",
+    avatar: avatarRoberto,
     text: "Meu hotel agora oferece piscina aquecida o ano todo. Os hóspedes adoram e isso virou um diferencial competitivo enorme.",
   },
 ];
@@ -42,9 +48,12 @@ const Testimonials = () => {
                   ))}
                 </div>
                 <p className="mb-4 text-sm leading-relaxed text-primary-foreground/90">"{t.text}"</p>
-                <div>
-                  <p className="text-sm font-semibold text-primary-foreground md:text-base">{t.name}</p>
-                  <p className="text-xs text-primary-foreground/60">{t.location}</p>
+                <div className="flex items-center gap-3">
+                  <img src={t.avatar} alt={t.name} className="h-10 w-10 rounded-full object-cover" />
+                  <div>
+                    <p className="text-sm font-semibold text-primary-foreground md:text-base">{t.name}</p>
+                    <p className="text-xs text-primary-foreground/60">{t.location}</p>
+                  </div>
                 </div>
               </CardContent>
             </Card>
