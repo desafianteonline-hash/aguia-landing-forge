@@ -1,6 +1,7 @@
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { Button } from "@/components/ui/button";
 import { getWhatsAppUrl } from "@/lib/whatsapp";
+import logoBranco from "@/assets/logo-branco.png";
 
 const CTAFinal = () => {
   return (
@@ -27,6 +28,8 @@ const CTAFinal = () => {
         <p className="mt-3 text-xs text-primary-foreground/50 md:mt-4 md:text-sm">
           Atendimento de segunda a sábado • Resposta rápida
         </p>
+
+        <img src={logoBranco} alt="Águia Aquecedores" className="mx-auto mt-8 h-12 object-contain md:mt-12 md:h-16" />
       </div>
     </section>
   );
