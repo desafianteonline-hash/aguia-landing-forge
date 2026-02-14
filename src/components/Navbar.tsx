@@ -22,10 +22,7 @@ const Navbar = () => {
     return () => window.removeEventListener("resize", onResize);
   }, []);
 
-  useEffect(() => {
-    document.body.style.overflow = mobileOpen ? "hidden" : "";
-    return () => { document.body.style.overflow = ""; };
-  }, [mobileOpen]);
+  // No body overflow lock — menu scrolls internally
 
   const links = [
     { label: "Serviços", href: "#servicos" },
@@ -98,37 +95,37 @@ const Navbar = () => {
         </div>
       </header>
 
-      {/* Mobile menu - rendered outside header to avoid stacking issues */}
+      {/* Mobile dropdown menu */}
       {mobileOpen && (
         <div
-          className="fixed inset-0 top-[57px] z-[60] md:hidden"
+          className="fixed left-0 right-0 top-[57px] z-[60] max-h-[calc(100vh-57px)] overflow-y-auto border-t border-border shadow-xl md:hidden"
           style={{ backgroundColor: "#ffffff" }}
         >
-          <nav className="flex min-h-full flex-col gap-2 px-5 py-6">
+          <nav className="flex flex-col gap-1 px-5 py-4">
             {links.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
-                className="rounded-xl px-4 py-4 text-lg font-semibold text-foreground transition-colors hover:bg-muted active:bg-muted"
+                className="rounded-xl px-4 py-3 text-lg font-semibold text-foreground transition-colors hover:bg-muted active:bg-muted"
               >
                 {link.label}
               </a>
             ))}
 
-            <div className="mt-4 border-t border-border pt-6">
+            <div className="mt-3 border-t border-border pt-4 pb-2">
               <a
                 href={getWhatsAppUrl()}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setMobileOpen(false)}
               >
-                <Button className="h-14 w-full gap-2 bg-secondary text-base font-bold text-secondary-foreground hover:bg-secondary/90">
-                  <WhatsAppIcon className="h-5 w-5" />
+                <Button className="h-12 w-full gap-2 bg-secondary text-sm font-bold text-secondary-foreground hover:bg-secondary/90">
+                  <WhatsAppIcon className="h-5 w-5 shrink-0" />
                   Solicitar Orçamento Grátis
                 </Button>
               </a>
-              <p className="mt-3 text-center text-sm text-muted-foreground">
+              <p className="mt-2 text-center text-xs text-muted-foreground">
                 Resposta rápida pelo WhatsApp
               </p>
             </div>
