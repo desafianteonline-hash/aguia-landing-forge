@@ -7,9 +7,9 @@ const CTAFinal = () => {
     <section className="bg-primary px-5 py-14 md:px-4 md:py-28">
       <div className="container mx-auto max-w-3xl text-center">
         <h2 className="mb-3 text-2xl font-bold text-primary-foreground md:mb-4 md:text-4xl lg:text-5xl">
-          Pronto Para Ter Sua Piscina
+          Pronto para ter sua piscina
           <br />
-          <span className="text-secondary">Aquecida o Ano Todo?</span>
+          <span className="text-secondary">aquecida o ano todo?</span>
         </h2>
 
         <p className="mx-auto mb-8 max-w-xl text-sm text-primary-foreground/80 md:mb-10 md:text-lg">

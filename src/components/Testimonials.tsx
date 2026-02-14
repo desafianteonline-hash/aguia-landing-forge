@@ -25,7 +25,7 @@ const Testimonials = () => {
       <div className="container mx-auto max-w-5xl">
         <div className="mb-8 text-center md:mb-14">
           <h2 className="mb-3 text-2xl font-bold text-primary-foreground md:mb-4 md:text-4xl">
-            O Que Nossos Clientes Dizem
+            O que nossos clientes dizem
           </h2>
           <p className="mx-auto max-w-2xl text-base text-primary-foreground/70">
             Depoimentos reais de quem já investiu em conforto e economia.
