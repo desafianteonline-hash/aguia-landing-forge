@@ -36,8 +36,9 @@ const Hero = () => {
             Aquecedores de piscina com tecnologia inverter que garantem conforto térmico e economia real na sua conta de energia.
           </p>
 
-          <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer">
-            <Button size="lg" className="h-12 gap-2 bg-secondary px-6 text-sm font-bold text-secondary-foreground shadow-lg hover:bg-secondary/90 md:h-16 md:gap-3 md:px-10 md:text-lg">
+          <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer" className="relative inline-block">
+            <span className="absolute inset-0 animate-ping rounded-md bg-secondary opacity-20" />
+            <Button size="lg" className="relative h-12 gap-2 bg-secondary px-6 text-sm font-bold text-secondary-foreground shadow-lg hover:bg-secondary/90 md:h-16 md:gap-3 md:px-10 md:text-lg">
               <WhatsAppIcon className="h-5 w-5 md:h-6 md:w-6" />
               Solicitar Orçamento Grátis
             </Button>
