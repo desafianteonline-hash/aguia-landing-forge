@@ -15,7 +15,7 @@ const Guarantee = () => {
         </h2>
 
         <p className="mx-auto mb-8 max-w-xl text-muted-foreground leading-relaxed">
-          Trabalhamos apenas com equipamentos de alta qualidade e oferecemos garantia de fábrica, instalação profissional e suporte técnico contínuo. Seu investimento está protegido do início ao fim.
+          Trabalhamos apenas com equipamentos de alta qualidade e oferecemos <strong className="text-foreground">2 anos de garantia</strong>, instalação profissional e suporte com atendimento rápido. Seu investimento está protegido do início ao fim.
         </p>
 
         <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer">

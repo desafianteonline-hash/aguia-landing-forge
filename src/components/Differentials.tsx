@@ -3,9 +3,9 @@ import { Button } from "@/components/ui/button";
 import { getWhatsAppUrl } from "@/lib/whatsapp";
 
 const items = [
-  { icon: ShieldCheck, title: "Garantia de Fábrica", description: "Todos os equipamentos com garantia do fabricante para sua segurança." },
+  { icon: ShieldCheck, title: "Garantia de 2 Anos", description: "Todos os equipamentos com 2 anos de garantia para sua total segurança." },
   { icon: Wrench, title: "Instalação Profissional", description: "Equipe técnica especializada para instalação correta e segura." },
-  { icon: Headphones, title: "Suporte Técnico", description: "Assistência pós-venda dedicada para qualquer dúvida ou manutenção." },
+  { icon: Headphones, title: "Suporte e Atendimento Rápido", description: "Assistência pós-venda ágil e dedicada para qualquer dúvida ou manutenção." },
   { icon: Award, title: "Marcas Líderes", description: "Trabalhamos com as melhores marcas do mercado de aquecimento." },
 ];
 
