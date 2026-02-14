@@ -1,4 +1,5 @@
-import { ShieldCheck, MessageCircle } from "lucide-react";
+import { ShieldCheck } from "lucide-react";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { Button } from "@/components/ui/button";
 import { getWhatsAppUrl } from "@/lib/whatsapp";
 
@@ -20,7 +21,7 @@ const Guarantee = () => {
 
         <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer">
           <Button size="lg" className="gap-2 bg-secondary font-bold text-secondary-foreground hover:bg-secondary/90">
-            <MessageCircle className="h-5 w-5" />
+            <WhatsAppIcon className="h-5 w-5" />
             Garantir Meu Orçamento
           </Button>
         </a>

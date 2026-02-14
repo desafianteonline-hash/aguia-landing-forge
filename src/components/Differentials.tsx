@@ -1,4 +1,5 @@
-import { ShieldCheck, Wrench, Headphones, Award, MessageCircle } from "lucide-react";
+import { ShieldCheck, Wrench, Headphones, Award } from "lucide-react";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { Button } from "@/components/ui/button";
 import { getWhatsAppUrl } from "@/lib/whatsapp";
 
@@ -36,7 +37,7 @@ const Differentials = () => {
         <div className="mt-12 text-center">
           <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer">
             <Button variant="outline" size="lg" className="gap-2 border-primary font-semibold text-primary hover:bg-primary hover:text-primary-foreground">
-              <MessageCircle className="h-5 w-5" />
+              <WhatsAppIcon className="h-5 w-5" />
               Falar com um Especialista
             </Button>
           </a>

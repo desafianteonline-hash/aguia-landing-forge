@@ -1,4 +1,5 @@
-import { MessageCircle, Droplets } from "lucide-react";
+import { Droplets } from "lucide-react";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { Button } from "@/components/ui/button";
 import { getWhatsAppUrl } from "@/lib/whatsapp";
 import heroImage from "@/assets/hero-pool.jpg";
@@ -36,7 +37,7 @@ const Hero = () => {
 
           <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer">
             <Button size="lg" className="h-14 gap-3 bg-secondary px-8 text-base font-bold text-secondary-foreground shadow-lg hover:bg-secondary/90 md:h-16 md:px-10 md:text-lg">
-              <MessageCircle className="h-5 w-5 md:h-6 md:w-6" />
+              <WhatsAppIcon className="h-5 w-5 md:h-6 md:w-6" />
               Solicitar Orçamento Grátis
             </Button>
           </a>

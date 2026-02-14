@@ -1,6 +1,6 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
-import { MessageCircle } from "lucide-react";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { getWhatsAppUrl } from "@/lib/whatsapp";
 
 const faqs = [
@@ -53,7 +53,7 @@ const FAQ = () => {
           <p className="mb-4 text-muted-foreground">Ainda tem dúvidas? Fale direto com a gente!</p>
           <a href={getWhatsAppUrl("Olá! Tenho uma dúvida sobre aquecedores de piscina.")} target="_blank" rel="noopener noreferrer">
             <Button size="lg" className="gap-2 bg-secondary font-bold text-secondary-foreground hover:bg-secondary/90">
-              <MessageCircle className="h-5 w-5" />
+              <WhatsAppIcon className="h-5 w-5" />
               Tirar Minhas Dúvidas
             </Button>
           </a>
