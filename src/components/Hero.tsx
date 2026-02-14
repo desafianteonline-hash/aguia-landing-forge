@@ -12,7 +12,8 @@ const Hero = () => {
         <img
           src={heroImage}
           alt="Piscina aquecida com vapor ao entardecer"
-          className="h-full w-full object-cover"
+          className="h-full w-full object-cover object-center"
+          style={{ objectPosition: '50% 50%' }}
           loading="eager"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-primary/50 md:from-primary/90 md:via-primary/70 md:to-primary/40" />
