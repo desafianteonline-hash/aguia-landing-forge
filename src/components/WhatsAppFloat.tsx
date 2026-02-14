@@ -11,7 +11,7 @@ const WhatsAppFloat = () => {
       className="fixed bottom-4 right-4 z-50 flex flex-col items-end gap-2 md:bottom-6 md:right-6"
     >
       <span className="rounded-lg bg-card px-3 py-1.5 text-sm font-medium text-foreground shadow-lg">
-        Posso ajudar? 😊
+        Posso ajudar?
       </span>
       <div className="relative flex h-14 w-14 items-center justify-center rounded-full bg-[hsl(142,70%,45%)] shadow-lg transition-transform hover:scale-110 hover:shadow-xl md:h-16 md:w-16">
         <span className="absolute inset-0 animate-ping rounded-full bg-[hsl(142,70%,45%)] opacity-30" />
