@@ -59,3 +59,10 @@
     scroll-behavior: smooth;
   }
 }
+
+@keyframes shinery {
+  0%, 100% { left: -10%; opacity: 0; }
+  20% { opacity: 1; }
+  48% { left: 110%; opacity: 1; }
+  51% { opacity: 0; }
+}

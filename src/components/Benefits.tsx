@@ -1,8 +1,6 @@
 import { Zap, ThermometerSun, TrendingUp, Leaf } from "lucide-react";
-import WhatsAppIcon from "@/components/WhatsAppIcon";
+import WhatsAppCTAButton from "@/components/WhatsAppCTAButton";
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { getWhatsAppUrl } from "@/lib/whatsapp";
 
 const benefits = [
   {
@@ -57,12 +55,9 @@ const Benefits = () => {
         </div>
 
         <div className="mt-12 text-center">
-          <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer">
-            <Button size="lg" className="gap-2 bg-secondary font-bold text-secondary-foreground hover:bg-secondary/90">
-              <WhatsAppIcon className="h-5 w-5" />
-              Quero Economizar — Falar no WhatsApp
-            </Button>
-          </a>
+          <WhatsAppCTAButton>
+            Quero Economizar — Falar no WhatsApp
+          </WhatsAppCTAButton>
         </div>
       </div>
     </section>
