@@ -16,16 +16,16 @@ const WhatsAppCTAButton = ({ children, message, className = "" }: WhatsAppCTABut
       className={`group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-full px-12 py-6 text-base font-medium text-white transition-all duration-500 hover:scale-105 md:px-12 md:py-6 ${className}`}
       style={{
         fontFamily: "'Unbounded', sans-serif",
-        background: "radial-gradient(57.68% 100% at 47.82% 0%, #4ADE80 0%, #16A34A 100%)",
+        background: "radial-gradient(57.68% 100% at 47.82% 0%, #FDBA74 0%, #EA580C 100%)",
         boxShadow:
-          "0px -27px 80px 0px rgba(22, 163, 74, 0.22), 0px -9.855px 29.201px 0px rgba(22, 163, 74, 0.15), 0px -4.785px 14.177px 0px rgba(22, 163, 74, 0.12), 0px -2.346px 6.95px 0px rgba(22, 163, 74, 0.10), 0px -0.927px 2.748px 0px rgba(22, 163, 74, 0.07)",
+          "0px -27px 80px 0px rgba(234, 88, 12, 0.22), 0px -9.855px 29.201px 0px rgba(234, 88, 12, 0.15), 0px -4.785px 14.177px 0px rgba(234, 88, 12, 0.12), 0px -2.346px 6.95px 0px rgba(234, 88, 12, 0.10), 0px -0.927px 2.748px 0px rgba(234, 88, 12, 0.07)",
       }}
     >
       {/* Shine effect */}
       <span
         className="pointer-events-none absolute bottom-0 h-[160%] w-[90px] select-none"
         style={{
-          background: "linear-gradient(10deg, #D1E7DD 12.81%, rgba(209, 231, 221, 0.00) 66.66%)",
+          background: "linear-gradient(10deg, #FED7AA 12.81%, rgba(254, 215, 170, 0.00) 66.66%)",
           transform: "translateX(-50%) skew(-25deg)",
           filter: "blur(4px)",
           animation: "shinery 3s infinite ease-in-out",
