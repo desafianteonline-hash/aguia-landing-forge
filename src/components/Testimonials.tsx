@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useCallback, useEffect } from "react";
+import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import t1 from "@/assets/testimonial-1.jpg";
 import t2 from "@/assets/testimonial-2.jpg";
 import t3 from "@/assets/testimonial-3.jpg";
@@ -16,7 +17,26 @@ const screenshots = [
 ];
 
 const Testimonials = () => {
-  const [selected, setSelected] = useState<string | null>(null);
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+
+  const prev = useCallback(() => {
+    setSelectedIndex((i) => (i !== null ? (i - 1 + screenshots.length) % screenshots.length : null));
+  }, []);
+
+  const next = useCallback(() => {
+    setSelectedIndex((i) => (i !== null ? (i + 1) % screenshots.length : null));
+  }, []);
+
+  useEffect(() => {
+    if (selectedIndex === null) return;
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === "ArrowLeft") prev();
+      else if (e.key === "ArrowRight") next();
+      else if (e.key === "Escape") setSelectedIndex(null);
+    };
+    window.addEventListener("keydown", handleKey);
+    return () => window.removeEventListener("keydown", handleKey);
+  }, [selectedIndex, prev, next]);
 
   return (
     <section id="depoimentos" className="bg-primary px-5 py-14 md:px-4 md:py-28">
@@ -31,10 +51,10 @@ const Testimonials = () => {
         </div>
 
         <div className="grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-4">
-          {screenshots.map((s) => (
+          {screenshots.map((s, index) => (
             <button
               key={s.id}
-              onClick={() => setSelected(s.src)}
+              onClick={() => setSelectedIndex(index)}
               className="overflow-hidden rounded-xl border-2 border-primary-foreground/10 transition-transform hover:scale-[1.03] focus:outline-none"
             >
               <img
@@ -48,16 +68,48 @@ const Testimonials = () => {
         </div>
       </div>
 
-      {selected && (
+      {selectedIndex !== null && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
-          onClick={() => setSelected(null)}
+          onClick={() => setSelectedIndex(null)}
         >
+          <button
+            onClick={(e) => { e.stopPropagation(); setSelectedIndex(null); }}
+            className="absolute right-4 top-4 rounded-full bg-white/10 p-2 text-white transition-colors hover:bg-white/20"
+          >
+            <X className="h-6 w-6" />
+          </button>
+
+          <button
+            onClick={(e) => { e.stopPropagation(); prev(); }}
+            className="absolute left-2 rounded-full bg-white/10 p-2 text-white transition-colors hover:bg-white/20 md:left-6"
+          >
+            <ChevronLeft className="h-8 w-8" />
+          </button>
+
           <img
-            src={selected}
-            alt="Depoimento ampliado"
-            className="max-h-[90vh] max-w-full rounded-lg"
+            src={screenshots[selectedIndex].src}
+            alt={screenshots[selectedIndex].alt}
+            className="max-h-[85vh] max-w-full rounded-lg"
+            onClick={(e) => e.stopPropagation()}
           />
+
+          <button
+            onClick={(e) => { e.stopPropagation(); next(); }}
+            className="absolute right-2 rounded-full bg-white/10 p-2 text-white transition-colors hover:bg-white/20 md:right-6"
+          >
+            <ChevronRight className="h-8 w-8" />
+          </button>
+
+          <div className="absolute bottom-6 flex gap-2">
+            {screenshots.map((_, i) => (
+              <button
+                key={i}
+                onClick={(e) => { e.stopPropagation(); setSelectedIndex(i); }}
+                className={`h-2 w-2 rounded-full transition-colors ${i === selectedIndex ? "bg-white" : "bg-white/40"}`}
+              />
+            ))}
+          </div>
         </div>
       )}
     </section>
