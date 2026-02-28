@@ -1,4 +1,4 @@
-import { useState, useCallback, useEffect } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import t1 from "@/assets/testimonial-1.jpg";
 import t2 from "@/assets/testimonial-2.jpg";
@@ -18,6 +18,7 @@ const screenshots = [
 
 const Testimonials = () => {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+  const touchStart = useRef<number | null>(null);
 
   const prev = useCallback(() => {
     setSelectedIndex((i) => (i !== null ? (i - 1 + screenshots.length) % screenshots.length : null));
@@ -26,6 +27,19 @@ const Testimonials = () => {
   const next = useCallback(() => {
     setSelectedIndex((i) => (i !== null ? (i + 1) % screenshots.length : null));
   }, []);
+
+  const handleTouchStart = useCallback((e: React.TouchEvent) => {
+    touchStart.current = e.touches[0].clientX;
+  }, []);
+
+  const handleTouchEnd = useCallback((e: React.TouchEvent) => {
+    if (touchStart.current === null) return;
+    const diff = touchStart.current - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) {
+      diff > 0 ? next() : prev();
+    }
+    touchStart.current = null;
+  }, [next, prev]);
 
   useEffect(() => {
     if (selectedIndex === null) return;
@@ -72,6 +86,8 @@ const Testimonials = () => {
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
           onClick={() => setSelectedIndex(null)}
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
         >
           <button
             onClick={(e) => { e.stopPropagation(); setSelectedIndex(null); }}
