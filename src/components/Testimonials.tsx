@@ -7,10 +7,10 @@ import t5 from "@/assets/testimonial-5.jpg";
 import t6 from "@/assets/testimonial-6.jpg";
 
 const screenshots = [
-  { id: 1, src: t1, alt: "Depoimento cliente - piscina quentinha" },
-  { id: 2, src: t2, alt: "Depoimento cliente - primeira vez bateu 33 graus" },
-  { id: 3, src: t3, alt: "Depoimento cliente - aquecedor aqueceu bem" },
-  { id: 4, src: t4, alt: "Depoimento cliente - melhor investimento" },
+  { id: 1, src: t4, alt: "Depoimento cliente - melhor investimento" },
+  { id: 2, src: t1, alt: "Depoimento cliente - piscina quentinha" },
+  { id: 3, src: t2, alt: "Depoimento cliente - primeira vez bateu 33 graus" },
+  { id: 4, src: t3, alt: "Depoimento cliente - aquecedor aqueceu bem" },
   { id: 5, src: t5, alt: "Depoimento cliente - está maravilhoso" },
   { id: 6, src: t6, alt: "Depoimento cliente - excelente investimento" },
 ];
