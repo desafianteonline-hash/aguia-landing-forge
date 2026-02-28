@@ -98,9 +98,9 @@ const Testimonials = () => {
 
           <button
             onClick={(e) => { e.stopPropagation(); prev(); }}
-            className="absolute left-2 rounded-full bg-white/10 p-2 text-white transition-colors hover:bg-white/20 md:left-6"
+            className="absolute left-3 top-1/2 -translate-y-1/2 rounded-full bg-white/20 p-3 text-white shadow-lg backdrop-blur-sm transition-colors hover:bg-white/30 md:left-6"
           >
-            <ChevronLeft className="h-8 w-8" />
+            <ChevronLeft className="h-7 w-7 md:h-8 md:w-8" />
           </button>
 
           <img
@@ -112,9 +112,9 @@ const Testimonials = () => {
 
           <button
             onClick={(e) => { e.stopPropagation(); next(); }}
-            className="absolute right-2 rounded-full bg-white/10 p-2 text-white transition-colors hover:bg-white/20 md:right-6"
+            className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-white/20 p-3 text-white shadow-lg backdrop-blur-sm transition-colors hover:bg-white/30 md:right-6"
           >
-            <ChevronRight className="h-8 w-8" />
+            <ChevronRight className="h-7 w-7 md:h-8 md:w-8" />
           </button>
 
           <div className="absolute bottom-6 flex gap-2">
