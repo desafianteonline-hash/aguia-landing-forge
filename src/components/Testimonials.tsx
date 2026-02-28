@@ -1,12 +1,18 @@
 import { useState } from "react";
+import t1 from "@/assets/testimonial-1.jpg";
+import t2 from "@/assets/testimonial-2.jpg";
+import t3 from "@/assets/testimonial-3.jpg";
+import t4 from "@/assets/testimonial-4.jpg";
+import t5 from "@/assets/testimonial-5.jpg";
+import t6 from "@/assets/testimonial-6.jpg";
 
 const screenshots = [
-  { id: 1, src: "/placeholder.svg", alt: "Depoimento cliente 1" },
-  { id: 2, src: "/placeholder.svg", alt: "Depoimento cliente 2" },
-  { id: 3, src: "/placeholder.svg", alt: "Depoimento cliente 3" },
-  { id: 4, src: "/placeholder.svg", alt: "Depoimento cliente 4" },
-  { id: 5, src: "/placeholder.svg", alt: "Depoimento cliente 5" },
-  { id: 6, src: "/placeholder.svg", alt: "Depoimento cliente 6" },
+  { id: 1, src: t1, alt: "Depoimento cliente - piscina quentinha" },
+  { id: 2, src: t2, alt: "Depoimento cliente - primeira vez bateu 33 graus" },
+  { id: 3, src: t3, alt: "Depoimento cliente - aquecedor aqueceu bem" },
+  { id: 4, src: t4, alt: "Depoimento cliente - melhor investimento" },
+  { id: 5, src: t5, alt: "Depoimento cliente - está maravilhoso" },
+  { id: 6, src: t6, alt: "Depoimento cliente - excelente investimento" },
 ];
 
 const Testimonials = () => {
