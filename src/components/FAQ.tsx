@@ -14,7 +14,7 @@ const faqs = [
   },
   {
     q: "Qual o prazo de instalação?",
-    a: "Após a aprovação do orçamento, a instalação é geralmente realizada em 1 a 3 dias úteis, dependendo da complexidade do projeto.",
+    a: "Após a aprovação do orçamento, a instalação é geralmente realizada em 3 a 7 dias úteis, dependendo da complexidade do projeto.",
   },
   {
     q: "Qual a garantia do equipamento?",
