@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import Benefits from "@/components/Benefits";
 import Authority from "@/components/Authority";
 import Services from "@/components/Services";
+import Products from "@/components/Products";
 import Audience from "@/components/Audience";
 import Testimonials from "@/components/Testimonials";
 import Differentials from "@/components/Differentials";
@@ -20,6 +21,7 @@ const Index = () => {
       <Benefits />
       <Authority />
       <Services />
+      <Products />
       <Audience />
       <Testimonials />
       <Differentials />
