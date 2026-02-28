@@ -1,24 +1,28 @@
 import { useState } from "react";
+import productResidencial from "@/assets/product-residencial.png";
+import productComercial from "@/assets/product-comercial.png";
+import productPremium from "@/assets/product-premium.png";
+import productCompacto from "@/assets/product-compacto.png";
 
 const products = [
   {
-    src: "/placeholder.svg",
-    alt: "Aquecedor Águia Hot - Modelo 1",
+    src: productResidencial,
+    alt: "Aquecedor Águia Hot - Modelo Residencial",
     title: "Aquecedor Inverter Residencial",
   },
   {
-    src: "/placeholder.svg",
-    alt: "Aquecedor Águia Hot - Modelo 2",
+    src: productComercial,
+    alt: "Aquecedor Águia Hot - Modelo Comercial",
     title: "Aquecedor Inverter Comercial",
   },
   {
-    src: "/placeholder.svg",
-    alt: "Aquecedor Águia Hot - Modelo 3",
+    src: productPremium,
+    alt: "Aquecedor Águia Hot - Modelo Premium",
     title: "Aquecedor Inverter Premium",
   },
   {
-    src: "/placeholder.svg",
-    alt: "Aquecedor Águia Hot - Modelo 4",
+    src: productCompacto,
+    alt: "Aquecedor Águia Hot - Modelo Compacto",
     title: "Aquecedor Inverter Compacto",
   },
 ];
