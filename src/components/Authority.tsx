@@ -1,11 +1,55 @@
 import { Clock, ShoppingCart, Users, MapPin } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 
 const stats = [
-  { icon: Clock, value: "+10", label: "Anos de experiência" },
-  { icon: ShoppingCart, value: "+1.000", label: "Aquecedores vendidos" },
-  { icon: Users, value: "+800", label: "Clientes satisfeitos" },
-  { icon: MapPin, value: "+50", label: "Cidades atendidas" },
+  { icon: Clock, numericValue: 10, prefix: "+", suffix: "", label: "Anos de experiência" },
+  { icon: ShoppingCart, numericValue: 1000, prefix: "+", suffix: "", label: "Aquecedores vendidos", formatNumber: true },
+  { icon: Users, numericValue: 800, prefix: "+", suffix: "", label: "Clientes satisfeitos" },
+  { icon: MapPin, numericValue: 50, prefix: "+", suffix: "", label: "Cidades atendidas" },
 ];
+
+const formatNum = (n: number, format?: boolean) =>
+  format ? n.toLocaleString("pt-BR") : String(n);
+
+const CountUp = ({ target, prefix, suffix, format, duration = 2000 }: { target: number; prefix: string; suffix: string; format?: boolean; duration?: number }) => {
+  const [count, setCount] = useState(0);
+  const [started, setStarted] = useState(false);
+  const ref = useRef<HTMLSpanElement>(null);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) { setStarted(true); observer.disconnect(); } },
+      { threshold: 0.3 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!started) return;
+    const steps = 60;
+    const increment = target / steps;
+    let current = 0;
+    const interval = setInterval(() => {
+      current += increment;
+      if (current >= target) {
+        setCount(target);
+        clearInterval(interval);
+      } else {
+        setCount(Math.floor(current));
+      }
+    }, duration / steps);
+    return () => clearInterval(interval);
+  }, [started, target, duration]);
+
+  return (
+    <span ref={ref} className="text-3xl font-extrabold text-primary-foreground md:text-4xl">
+      {prefix}{formatNum(count, format)}{suffix}
+    </span>
+  );
+};
 
 const Authority = () => {
   return (
@@ -21,9 +65,7 @@ const Authority = () => {
               <div className="mb-3 flex h-14 w-14 items-center justify-center rounded-full bg-secondary/20">
                 <stat.icon className="h-7 w-7 text-secondary" />
               </div>
-              <span className="text-3xl font-extrabold text-primary-foreground md:text-4xl">
-                {stat.value}
-              </span>
+              <CountUp target={stat.numericValue} prefix={stat.prefix} suffix={stat.suffix} format={stat.formatNumber} />
               <span className="mt-1 text-sm text-primary-foreground/80 md:text-base">
                 {stat.label}
               </span>
