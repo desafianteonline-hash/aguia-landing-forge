@@ -1,8 +1,7 @@
-import { Home, Building2, Hotel, Trees, Stethoscope } from "lucide-react";
+import { Home, Hotel, Trees, Stethoscope } from "lucide-react";
 
 const profiles = [
-  { icon: Home, title: "Residências", description: "Famílias que querem aproveitar a piscina o ano todo com conforto e economia." },
-  { icon: Building2, title: "Condomínios", description: "Áreas comuns com piscina aquecida agregam valor e satisfação dos moradores." },
+  { icon: Home, title: "Residências e Condomínios", description: "Famílias e condomínios que querem aproveitar a piscina o ano todo com conforto e economia." },
   { icon: Hotel, title: "Hotéis e Pousadas", description: "Ofereça uma experiência premium aos hóspedes com piscina sempre na temperatura ideal." },
   { icon: Stethoscope, title: "Clínicas", description: "Piscinas terapêuticas com temperatura controlada para reabilitação e bem-estar dos pacientes." },
   { icon: Trees, title: "Sítios e Chácaras", description: "Transforme sua área de lazer em um refúgio aconchegante mesmo nos dias mais frios." },
@@ -21,7 +20,7 @@ const Audience = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-5 lg:gap-8">
+        <div className="grid grid-cols-2 gap-6 lg:grid-cols-4 lg:gap-8">
           {profiles.map((p) => (
             <div key={p.title} className="text-center">
               <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-xl bg-primary md:mb-4 md:h-16 md:w-16 md:rounded-2xl">
