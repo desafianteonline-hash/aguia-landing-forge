@@ -41,11 +41,13 @@ const Benefits = () => {
   return (
     <section id="beneficios" className="bg-muted px-5 py-14 md:px-4 md:py-28">
       <div className="container mx-auto max-w-5xl">
-        <div className="mb-8 text-center md:mb-14">
-          <h2 className="mb-3 text-3xl font-extrabold leading-tight text-foreground md:mb-4 md:text-5xl">
-            Por que escolher um <span className="text-secondary">Aquecedor Águia Hot</span>?
+        <div className="mb-10 text-center md:mb-14">
+          <h2 className="mb-4 text-3xl font-extrabold leading-tight text-foreground md:mb-6 md:text-5xl">
+            Por que escolher um
+            <br className="hidden sm:block lg:hidden" />
+            {" "}<span className="text-secondary">Aquecedor Águia Hot</span>?
           </h2>
-          <p className="mx-auto max-w-2xl text-base text-muted-foreground md:text-base">
+          <p className="mx-auto max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
             Tecnologia de ponta para máximo conforto com o menor custo operacional.
           </p>
         </div>
