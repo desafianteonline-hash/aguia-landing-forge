@@ -26,11 +26,11 @@ const Services = () => {
         {/* Grid layout inspired by reference */}
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:grid-rows-2">
           {/* Image 1 - top left */}
-          <div className="overflow-hidden rounded-2xl">
+          <div className="overflow-hidden rounded-2xl bg-white p-4 flex items-center justify-center">
             <img
               src={servicePool}
-              alt="Piscina aquecida com vapor"
-              className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+              alt="Aquecedor inverter Águia Hot"
+              className="h-full w-full object-contain"
               loading="lazy"
             />
           </div>
