@@ -26,7 +26,7 @@ const Services = () => {
         {/* Grid layout inspired by reference */}
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:grid-rows-2">
           {/* Image 1 - top left */}
-          <div className="overflow-hidden rounded-2xl bg-white p-4 flex items-center justify-center">
+          <div className="overflow-hidden rounded-2xl border border-border bg-white p-4 flex items-center justify-center">
             <img
               src={servicePool}
               alt="Aquecedor inverter Águia Hot"
@@ -36,7 +36,7 @@ const Services = () => {
           </div>
 
           {/* Card 01 - top center */}
-          <div className="flex flex-col justify-center rounded-2xl bg-primary/10 p-6 md:p-8">
+          <div className="flex flex-col justify-center rounded-2xl border border-border bg-primary/10 p-6 md:p-8">
             <span className="mb-3 text-base font-bold text-secondary md:text-sm">01</span>
             <h3 className="mb-2 text-xl font-bold text-foreground md:text-xl">
               Aquecimento por Trocador de Calor
@@ -47,7 +47,7 @@ const Services = () => {
           </div>
 
           {/* Image 2 - top right */}
-          <div className="overflow-hidden rounded-2xl">
+          <div className="overflow-hidden rounded-2xl border border-border">
             <img
               src={serviceFamily}
               alt="Família aproveitando piscina aquecida"
@@ -57,7 +57,7 @@ const Services = () => {
           </div>
 
           {/* Card 02 - bottom left */}
-          <div className="flex flex-col justify-center rounded-2xl bg-primary/10 p-6 md:p-8">
+          <div className="flex flex-col justify-center rounded-2xl border border-border bg-primary/10 p-6 md:p-8">
             <span className="mb-3 text-base font-bold text-secondary md:text-sm">02</span>
             <h3 className="mb-2 text-xl font-bold text-foreground md:text-xl">
               Instalação Profissional
@@ -68,7 +68,7 @@ const Services = () => {
           </div>
 
           {/* Image 3 - bottom center */}
-          <div className="overflow-hidden rounded-2xl">
+          <div className="overflow-hidden rounded-2xl border border-border">
             <img
               src={serviceInverter}
               alt="Equipamento inverter para piscina"
@@ -78,7 +78,7 @@ const Services = () => {
           </div>
 
           {/* Card 03 - bottom right */}
-          <div className="flex flex-col justify-center rounded-2xl bg-primary/10 p-6 md:p-8">
+          <div className="flex flex-col justify-center rounded-2xl border border-border bg-primary/10 p-6 md:p-8">
             <span className="mb-3 text-base font-bold text-secondary md:text-sm">03</span>
             <h3 className="mb-2 text-xl font-bold text-foreground md:text-xl">
               Suporte Técnico Completo
