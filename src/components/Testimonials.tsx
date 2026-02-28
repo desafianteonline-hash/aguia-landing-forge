@@ -1,31 +1,17 @@
-import { Star } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
-import avatarCarlos from "@/assets/testimonial-carlos.jpg";
-import avatarFernanda from "@/assets/testimonial-fernanda.jpg";
-import avatarRoberto from "@/assets/testimonial-roberto.jpg";
+import { useState } from "react";
 
-const testimonials = [
-  {
-    name: "Carlos M.",
-    location: "Recife, PE",
-    avatar: avatarCarlos,
-    text: "Instalamos o aquecedor inverter e a diferença é absurda. A piscina está sempre agradável e a conta de luz quase não mudou. Super recomendo!",
-  },
-  {
-    name: "Fernanda S.",
-    location: "Jaboatão dos Guararapes, PE",
-    avatar: avatarFernanda,
-    text: "Atendimento excelente desde o orçamento até a instalação. A equipe é muito profissional e o produto funciona perfeitamente.",
-  },
-  {
-    name: "Roberto A.",
-    location: "Olinda, PE",
-    avatar: avatarRoberto,
-    text: "Meu hotel agora oferece piscina aquecida o ano todo. Os hóspedes adoram e isso virou um diferencial competitivo enorme.",
-  },
+const screenshots = [
+  { id: 1, src: "/placeholder.svg", alt: "Depoimento cliente 1" },
+  { id: 2, src: "/placeholder.svg", alt: "Depoimento cliente 2" },
+  { id: 3, src: "/placeholder.svg", alt: "Depoimento cliente 3" },
+  { id: 4, src: "/placeholder.svg", alt: "Depoimento cliente 4" },
+  { id: 5, src: "/placeholder.svg", alt: "Depoimento cliente 5" },
+  { id: 6, src: "/placeholder.svg", alt: "Depoimento cliente 6" },
 ];
 
 const Testimonials = () => {
+  const [selected, setSelected] = useState<string | null>(null);
+
   return (
     <section id="depoimentos" className="bg-primary px-5 py-14 md:px-4 md:py-28">
       <div className="container mx-auto max-w-5xl">
@@ -34,32 +20,40 @@ const Testimonials = () => {
             O que nossos clientes dizem
           </h2>
           <p className="mx-auto max-w-2xl text-base text-primary-foreground/70">
-            Depoimentos reais de quem já investiu em conforto e economia.
+            Veja depoimentos reais de quem já investiu em conforto e economia.
           </p>
         </div>
 
-        <div className="grid gap-4 md:gap-6 md:grid-cols-3">
-          {testimonials.map((t) => (
-            <Card key={t.name} className="border-none bg-primary-foreground/10 backdrop-blur-sm">
-              <CardContent className="p-5 md:p-6">
-                <div className="mb-3 flex gap-1">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-3.5 w-3.5 fill-secondary text-secondary md:h-4 md:w-4" />
-                  ))}
-                </div>
-                <p className="mb-4 text-sm leading-relaxed text-primary-foreground/90">"{t.text}"</p>
-                <div className="flex items-center gap-3">
-                  <img src={t.avatar} alt={t.name} className="h-10 w-10 rounded-full object-cover" />
-                  <div>
-                    <p className="text-sm font-semibold text-primary-foreground md:text-base">{t.name}</p>
-                    <p className="text-xs text-primary-foreground/60">{t.location}</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+        <div className="grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-4">
+          {screenshots.map((s) => (
+            <button
+              key={s.id}
+              onClick={() => setSelected(s.src)}
+              className="overflow-hidden rounded-xl border-2 border-primary-foreground/10 transition-transform hover:scale-[1.03] focus:outline-none"
+            >
+              <img
+                src={s.src}
+                alt={s.alt}
+                className="h-auto w-full object-cover"
+                loading="lazy"
+              />
+            </button>
           ))}
         </div>
       </div>
+
+      {selected && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
+          onClick={() => setSelected(null)}
+        >
+          <img
+            src={selected}
+            alt="Depoimento ampliado"
+            className="max-h-[90vh] max-w-full rounded-lg"
+          />
+        </div>
+      )}
     </section>
   );
 };
