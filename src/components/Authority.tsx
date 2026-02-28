@@ -55,7 +55,7 @@ const Authority = () => {
   return (
     <section className="bg-primary px-5 py-14 md:px-4 md:py-20">
       <div className="container mx-auto max-w-5xl">
-        <h2 className="mb-10 text-center text-2xl font-bold text-primary-foreground md:mb-14 md:text-4xl">
+        <h2 className="mb-10 text-center text-3xl font-extrabold text-primary-foreground md:mb-14 md:text-5xl lg:text-6xl">
           Por que confiar na <span className="text-secondary">Águia Hot</span>?
         </h2>
 

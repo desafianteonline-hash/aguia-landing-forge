@@ -11,7 +11,7 @@ const Guarantee = () => {
           <ShieldCheck className="h-8 w-8 text-primary-foreground md:h-10 md:w-10" />
         </div>
 
-        <h2 className="mb-3 text-2xl font-bold text-foreground md:mb-4 md:text-4xl">
+        <h2 className="mb-3 text-3xl font-extrabold text-foreground md:mb-4 md:text-5xl lg:text-6xl">
           Sua Satisfação é Nossa <span className="text-secondary">Garantia</span>
         </h2>
 
