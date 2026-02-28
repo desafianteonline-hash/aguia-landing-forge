@@ -56,7 +56,7 @@ const Testimonials = () => {
     <section id="depoimentos" className="bg-primary px-5 py-14 md:px-4 md:py-28">
       <div className="container mx-auto max-w-5xl">
         <div className="mb-8 text-center md:mb-14">
-          <h2 className="mb-3 text-3xl font-extrabold text-primary-foreground md:mb-4 md:text-5xl lg:text-6xl">
+          <h2 className="mb-3 text-3xl font-extrabold leading-tight text-primary-foreground md:mb-4 md:text-5xl">
             O que nossos clientes dizem
           </h2>
           <p className="mx-auto max-w-2xl text-base text-primary-foreground/70">
