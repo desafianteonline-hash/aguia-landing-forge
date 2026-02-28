@@ -1,5 +1,5 @@
 import servicePool from "@/assets/aquecedor-inverter.png";
-import serviceInverter from "@/assets/service-inverter.jpg";
+import serviceInverter from "@/assets/service-inverter-old.jpg";
 import serviceInstallation from "@/assets/service-installation.jpg";
 import serviceFamily from "@/assets/service-family.jpg";
 
