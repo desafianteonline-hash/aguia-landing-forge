@@ -1,6 +1,6 @@
 import servicePool from "@/assets/aquecedor-aguia-hot.png";
 import serviceInverter from "@/assets/service-inverter-old.jpg";
-import serviceInstallation from "@/assets/service-installation.jpg";
+import serviceInstallation from "@/assets/equipe-instalacao.png";
 import serviceFamily from "@/assets/service-family.jpg";
 
 const Services = () => {
