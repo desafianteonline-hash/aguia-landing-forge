@@ -8,7 +8,7 @@ const WhatsAppFloat = () => {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Fale conosco pelo WhatsApp"
-      className="fixed bottom-4 right-4 z-50 flex flex-col items-end gap-2 md:bottom-6 md:right-6"
+      className="fixed bottom-4 right-3 z-50 flex flex-col items-end gap-2 md:bottom-6 md:right-6"
     >
       <span className="rounded-lg bg-card px-3 py-1.5 text-sm font-medium text-foreground shadow-lg">
         Posso ajudar?

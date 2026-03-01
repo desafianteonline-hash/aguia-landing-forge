@@ -20,7 +20,7 @@ const Differentials = () => {
           </h2>
         </div>
 
-        <div className="grid gap-4 sm:grid-cols-2 md:gap-6">
+        <div className="grid gap-3 sm:grid-cols-2 md:gap-6">
           {items.map((item) => (
             <div key={item.title} className="flex gap-3 rounded-xl bg-card p-5 shadow-sm md:gap-4 md:p-6">
               <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-secondary/20 md:h-10 md:w-10">

@@ -20,7 +20,7 @@ const Audience = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 gap-6 lg:grid-cols-4 lg:gap-8">
+        <div className="grid grid-cols-2 gap-4 lg:grid-cols-4 lg:gap-8">
           {profiles.map((p) => (
             <div key={p.title} className="text-center">
               <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-xl bg-primary md:mb-4 md:h-16 md:w-16 md:rounded-2xl">
