@@ -1,7 +1,7 @@
 import servicePool from "@/assets/aquecedor-aguia-hot.png";
 import serviceInverter from "@/assets/service-inverter-old.jpg";
-import serviceInstallation from "@/assets/equipe-instalacao.png";
-
+import serviceInstallation from "@/assets/service-installation.jpg";
+import serviceFamily from "@/assets/service-family.jpg";
 
 const Services = () => {
   return (
@@ -49,34 +49,32 @@ const Services = () => {
           {/* Image 2 - top right */}
           <div className="overflow-hidden rounded-2xl border border-border">
             <img
-              src={serviceInstallation}
-              alt="Equipe profissional Águia Hot"
+              src={serviceFamily}
+              alt="Família aproveitando piscina aquecida"
               className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
               loading="lazy"
             />
           </div>
 
-          {/* Card 02 with image - bottom left, spans 2 columns */}
-          <div className="overflow-hidden rounded-2xl border border-border sm:col-span-2 lg:col-span-2">
-            <div className="grid grid-cols-1 sm:grid-cols-2 h-full">
-              <div className="flex flex-col justify-center bg-primary/10 p-6 md:p-8">
-                <span className="mb-3 text-base font-bold text-secondary md:text-sm">02</span>
-                <h3 className="mb-2 text-xl font-bold text-foreground md:text-xl">
-                  Instalação Profissional
-                </h3>
-                <p className="text-base leading-relaxed text-muted-foreground md:text-sm">
-                  Equipe especializada para instalação segura e otimizada, garantindo o máximo desempenho do seu aquecedor.
-                </p>
-              </div>
-              <div className="overflow-hidden">
-                <img
-                  src={serviceInstallation}
-                  alt="Equipe profissional Águia Hot"
-                  className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
-                  loading="lazy"
-                />
-              </div>
-            </div>
+          {/* Card 02 - bottom left */}
+          <div className="flex flex-col justify-center rounded-2xl border border-border bg-primary/10 p-6 md:p-8">
+            <span className="mb-3 text-base font-bold text-secondary md:text-sm">02</span>
+            <h3 className="mb-2 text-xl font-bold text-foreground md:text-xl">
+              Instalação Profissional
+            </h3>
+            <p className="text-base leading-relaxed text-muted-foreground md:text-sm">
+              Equipe especializada para instalação segura e otimizada, garantindo o máximo desempenho do seu aquecedor.
+            </p>
+          </div>
+
+          {/* Image 3 - bottom center */}
+          <div className="overflow-hidden rounded-2xl border border-border">
+            <img
+              src={serviceInverter}
+              alt="Equipamento inverter para piscina"
+              className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+              loading="lazy"
+            />
           </div>
 
           {/* Card 03 - bottom right */}
