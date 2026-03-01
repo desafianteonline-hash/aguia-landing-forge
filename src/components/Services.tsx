@@ -1,5 +1,5 @@
 import servicePool from "@/assets/aquecedor-aguia-hot.png";
-import serviceInverter from "@/assets/service-inverter-old.jpg";
+import serviceInverter from "@/assets/suporte-aguia-hot.png";
 import serviceInstallation from "@/assets/service-installation.jpg";
 import serviceFamily from "@/assets/equipe-aguia-hot.png";
 
