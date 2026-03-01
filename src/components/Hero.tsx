@@ -6,7 +6,7 @@ import heroImage from "@/assets/hero-pool.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[80vh] overflow-hidden md:min-h-[90vh]">
+    <section className="relative min-h-[70vh] overflow-hidden md:min-h-[90vh]">
       {/* Background image */}
       <div className="absolute inset-0">
         <img
@@ -19,7 +19,7 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-primary/50 md:from-primary/90 md:via-primary/70 md:to-primary/40" />
       </div>
 
-      <div className="container relative mx-auto flex min-h-[80vh] max-w-5xl items-center px-5 py-16 md:min-h-[90vh] md:px-4 md:py-20">
+      <div className="container relative mx-auto flex min-h-[70vh] max-w-5xl items-center px-5 pt-20 pb-12 md:min-h-[90vh] md:px-4 md:py-20">
         <div className="max-w-2xl">
           <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-secondary/30 bg-secondary/10 px-3 py-1.5 text-xs font-medium text-secondary backdrop-blur-sm md:mb-6 md:px-4 md:py-2 md:text-sm">
             <Droplets className="h-3.5 w-3.5 md:h-4 md:w-4" />
