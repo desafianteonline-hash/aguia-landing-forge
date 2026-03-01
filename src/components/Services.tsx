@@ -49,8 +49,8 @@ const Services = () => {
           {/* Image 2 - top right */}
           <div className="overflow-hidden rounded-2xl border border-border">
             <img
-              src={serviceFamily}
-              alt="Família aproveitando piscina aquecida"
+              src={serviceInstallation}
+              alt="Equipe profissional Águia Hot"
               className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
               loading="lazy"
             />
