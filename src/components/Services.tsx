@@ -26,7 +26,7 @@ const Services = () => {
         {/* Grid layout inspired by reference */}
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:grid-rows-2">
           {/* Image 1 - top left */}
-          <div className="overflow-hidden rounded-2xl border border-border bg-white p-4 flex items-center justify-center h-48 sm:h-auto">
+          <div className="overflow-hidden rounded-2xl border border-border bg-white p-4 flex items-center justify-center aspect-square">
             <img
               src={servicePool}
               alt="Aquecedor inverter Águia Hot"
@@ -47,7 +47,7 @@ const Services = () => {
           </div>
 
           {/* Image 2 - top right */}
-          <div className="overflow-hidden rounded-2xl border border-border h-48 sm:h-auto">
+          <div className="overflow-hidden rounded-2xl border border-border aspect-square">
             <img
               src={serviceFamily}
               alt="Família aproveitando piscina aquecida"
@@ -68,7 +68,7 @@ const Services = () => {
           </div>
 
           {/* Image 3 - bottom center */}
-          <div className="overflow-hidden rounded-2xl border border-border h-48 sm:h-auto">
+          <div className="overflow-hidden rounded-2xl border border-border aspect-square">
             <img
               src={serviceInverter}
               alt="Equipamento inverter para piscina"
