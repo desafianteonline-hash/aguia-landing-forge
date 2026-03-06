@@ -42,7 +42,7 @@ const Services = () => {
               Aquecimento por Trocador de Calor
             </h3>
             <p className="text-base leading-relaxed text-muted-foreground md:text-sm">
-              Tecnologia inverter com alta eficiência energética, capaz de aquecer sua piscina consumindo até 80% menos energia.
+              Tecnologia inverter com alta eficiência energética, capaz de aquecer sua piscina consumindo até 60% menos energia.
             </p>
           </div>
 

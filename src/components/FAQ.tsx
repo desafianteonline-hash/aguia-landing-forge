@@ -6,7 +6,7 @@ import { getWhatsAppUrl } from "@/lib/whatsapp";
 const faqs = [
   {
     q: "Quanto custa para manter um aquecedor de piscina ligado?",
-    a: "Com a tecnologia inverter, o consumo é muito baixo — até 80% mais econômico que aquecedores tradicionais. O custo mensal depende do tamanho da piscina e da região, mas geralmente é surpreendentemente acessível.",
+    a: "Com a tecnologia inverter, o consumo é muito baixo — até 60% mais econômico que aquecedores tradicionais. O custo mensal depende do tamanho da piscina e da região, mas geralmente é surpreendentemente acessível.",
   },
   {
     q: "O aquecedor funciona em dias frios ou chuvosos?",
