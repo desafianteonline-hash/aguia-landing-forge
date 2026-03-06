@@ -8,7 +8,7 @@ const benefits = [
   {
     icon: Cpu,
     title: "Full Inverter",
-    description: "Tecnologia 100% inverter para máxima eficiência energética, reduzindo o consumo em até 80%.",
+    description: "Tecnologia 100% inverter para máxima eficiência energética, reduzindo o consumo em até 60%.",
   },
   {
     icon: Wifi,

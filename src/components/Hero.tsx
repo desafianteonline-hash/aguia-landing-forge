@@ -23,7 +23,7 @@ const Hero = () => {
         <div className="max-w-2xl">
           <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-secondary/30 bg-secondary/10 px-3 py-1.5 text-xs font-medium text-secondary backdrop-blur-sm md:mb-6 md:px-4 md:py-2 md:text-sm">
             <Droplets className="h-3.5 w-3.5 md:h-4 md:w-4" />
-            Tecnologia Inverter — Economia de até 80%
+            Tecnologia Inverter — Economia de até 60%
           </div>
 
           <h1 className="mb-4 text-3xl font-extrabold leading-tight tracking-tight text-primary-foreground md:mb-6 md:text-5xl lg:text-6xl">
