@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 const stats = [
   { icon: Clock, numericValue: 10, prefix: "+", suffix: "", label: "Anos de experiência" },
   { icon: ShoppingCart, numericValue: 1000, prefix: "+", suffix: "", label: "Aquecedores vendidos", formatNumber: true },
-  { icon: Users, numericValue: 800, prefix: "+", suffix: "", label: "Clientes satisfeitos" },
+  { icon: Users, numericValue: 1000, prefix: "+", suffix: "", label: "Clientes satisfeitos", formatNumber: true },
   { icon: MapPin, numericValue: 50, prefix: "+", suffix: "", label: "Cidades atendidas" },
 ];
 
