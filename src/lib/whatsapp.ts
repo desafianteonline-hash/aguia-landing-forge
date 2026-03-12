@@ -1,4 +1,4 @@
-const WHATSAPP_NUMBER = "558197259824";
+const WHATSAPP_NUMBER = "5581999414376";
 const WHATSAPP_MESSAGE = encodeURIComponent("Gostaria de um orçamento 😊");
 
 export const getWhatsAppUrl = (message?: string) => {
