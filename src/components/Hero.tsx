@@ -1,19 +1,23 @@
-import { Droplets } from "lucide-react";
+import { CheckCircle } from "lucide-react";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { Button } from "@/components/ui/button";
 import { getWhatsAppUrl } from "@/lib/whatsapp";
 import heroImage from "@/assets/hero-pool.jpg";
 
+const proofs = [
+  "Piscina aquecida o ano inteiro",
+  "Baixo consumo de energia",
+  "Instalação profissional",
+];
+
 const Hero = () => {
   return (
     <section className="relative min-h-[70vh] overflow-hidden md:min-h-[90vh]">
-      {/* Background image */}
       <div className="absolute inset-0">
         <img
           src={heroImage}
           alt="Piscina aquecida com vapor ao entardecer"
           className="h-full w-full object-cover object-center"
-          style={{ objectPosition: '50% 50%' }}
           loading="eager"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-primary/50 md:from-primary/90 md:via-primary/70 md:to-primary/40" />
@@ -21,26 +25,30 @@ const Hero = () => {
 
       <div className="container relative mx-auto flex min-h-[70vh] max-w-5xl items-center px-5 pt-20 pb-12 md:min-h-[90vh] md:px-4 md:py-20">
         <div className="max-w-2xl">
-          <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-secondary/30 bg-secondary/10 px-3 py-1.5 text-xs font-medium text-secondary backdrop-blur-sm md:mb-6 md:px-4 md:py-2 md:text-sm">
-            <Droplets className="h-3.5 w-3.5 md:h-4 md:w-4" />
-            Tecnologia Inverter — Economia de até 60%
-          </div>
-
           <h1 className="mb-4 text-3xl font-extrabold leading-tight tracking-tight text-primary-foreground md:mb-6 md:text-5xl lg:text-6xl">
-            Sua Piscina Aquecida
+            Chega de Piscina Fria.
             <br />
-            <span className="text-secondary">o Ano Inteiro</span>
+            <span className="text-secondary">Aproveite Sua Piscina o Ano Inteiro.</span>
           </h1>
 
-          <p className="mb-8 max-w-xl text-base text-primary-foreground md:mb-10 md:text-xl">
-            Aquecedores de piscina com tecnologia inverter que garantem conforto térmico e economia real na sua conta de energia.
+          <p className="mb-6 max-w-xl text-base text-primary-foreground/90 md:mb-8 md:text-xl">
+            Instalação profissional de aquecimento para piscina com tecnologia inverter que mantém a água sempre na temperatura ideal com baixo consumo de energia.
           </p>
+
+          <div className="mb-8 flex flex-col gap-2 md:mb-10">
+            {proofs.map((proof) => (
+              <div key={proof} className="flex items-center gap-2 text-primary-foreground">
+                <CheckCircle className="h-4 w-4 shrink-0 text-secondary md:h-5 md:w-5" />
+                <span className="text-sm md:text-base">{proof}</span>
+              </div>
+            ))}
+          </div>
 
           <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer" className="relative inline-block">
             <span className="absolute inset-0 animate-ping rounded-md bg-secondary opacity-20" />
-            <Button size="lg" className="relative h-12 gap-2 bg-secondary px-6 text-sm font-bold text-secondary-foreground shadow-lg hover:bg-secondary/90 md:h-16 md:gap-3 md:px-10 md:text-lg">
+            <Button size="lg" className="relative h-12 gap-2 bg-secondary px-6 text-sm font-bold uppercase text-secondary-foreground shadow-lg hover:bg-secondary/90 md:h-16 md:gap-3 md:px-10 md:text-lg">
               <WhatsAppIcon className="h-5 w-5 md:h-6 md:w-6" />
-              Solicitar Orçamento Grátis
+              Solicitar Orçamento no WhatsApp
             </Button>
           </a>
 

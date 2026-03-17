@@ -1,4 +1,8 @@
 import { useState } from "react";
+import { CheckCircle } from "lucide-react";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
+import { Button } from "@/components/ui/button";
+import { getWhatsAppUrl } from "@/lib/whatsapp";
 import productResidencial from "@/assets/product-residencial.png";
 import productComercial from "@/assets/product-comercial.png";
 import productPremium from "@/assets/product-premium.png";
@@ -7,24 +11,34 @@ import productCompacto from "@/assets/product-compacto.png";
 const products = [
   {
     src: productResidencial,
-    alt: "Aquecedor Águia Hot - Modelo Residencial",
-    title: "Aquecedor Inverter Residencial",
+    alt: "Aquecedor Inverter - Linha Residencial",
+    title: "Linha Residencial",
+    application: "Piscinas até 30 mil litros",
   },
   {
     src: productComercial,
-    alt: "Aquecedor Águia Hot - Modelo Comercial",
-    title: "Aquecedor Inverter Comercial",
+    alt: "Aquecedor Inverter - Linha Comercial",
+    title: "Linha Comercial",
+    application: "Piscinas até 80 mil litros",
   },
   {
     src: productPremium,
-    alt: "Aquecedor Águia Hot - Modelo Premium",
-    title: "Aquecedor Inverter Premium",
+    alt: "Aquecedor Inverter - Linha Premium",
+    title: "Linha Premium",
+    application: "Piscinas até 120 mil litros",
   },
   {
     src: productCompacto,
-    alt: "Aquecedor Águia Hot - Modelo Compacto",
-    title: "Aquecedor Inverter Compacto",
+    alt: "Aquecedor Inverter - Linha Compacta",
+    title: "Linha Compacta",
+    application: "Piscinas até 15 mil litros",
   },
+];
+
+const miniBenefits = [
+  "Alta eficiência energética",
+  "Funcionamento silencioso",
+  "Longa durabilidade",
 ];
 
 const Products = () => {
@@ -35,10 +49,10 @@ const Products = () => {
       <div className="container mx-auto max-w-6xl">
         <div className="mb-8 text-center md:mb-14">
           <h2 className="mb-3 text-3xl font-extrabold leading-tight text-foreground md:mb-4 md:text-5xl">
-            Nossos <span className="text-secondary">Produtos</span>
+            Nossos <span className="text-secondary">Aquecedores</span> para Piscina
           </h2>
           <p className="mx-auto max-w-2xl text-base text-muted-foreground">
-            Conheça nossa linha completa de aquecedores de piscina com tecnologia inverter.
+            Equipamentos de alta eficiência com tecnologia inverter para diferentes tamanhos de piscina.
           </p>
         </div>
 
@@ -61,9 +75,33 @@ const Products = () => {
                 <h3 className="text-sm font-semibold text-foreground md:text-base">
                   {product.title}
                 </h3>
+                <p className="mt-1 text-xs text-muted-foreground md:text-sm">
+                  {product.application}
+                </p>
               </div>
             </button>
           ))}
+        </div>
+
+        {/* Mini-benefits */}
+        <div className="mt-8 flex flex-wrap justify-center gap-4 md:mt-10 md:gap-6">
+          {miniBenefits.map((b) => (
+            <div key={b} className="flex items-center gap-2 text-muted-foreground">
+              <CheckCircle className="h-4 w-4 shrink-0 text-secondary" />
+              <span className="text-sm md:text-base">{b}</span>
+            </div>
+          ))}
+        </div>
+
+        {/* CTA */}
+        <div className="mt-8 text-center md:mt-10">
+          <a href={getWhatsAppUrl("Olá! Quero saber qual aquecedor é ideal para minha piscina 🏊")} target="_blank" rel="noopener noreferrer" className="relative inline-block w-full sm:w-auto">
+            <span className="absolute inset-0 animate-ping rounded-md bg-secondary opacity-20" />
+            <Button size="lg" className="relative h-14 w-full gap-2 bg-secondary px-8 text-base font-bold text-secondary-foreground shadow-lg hover:bg-secondary/90 sm:w-auto">
+              <WhatsAppIcon className="h-5 w-5" />
+              Quero Saber Qual é o Ideal para Minha Piscina
+            </Button>
+          </a>
         </div>
 
         {selected !== null && (
@@ -75,6 +113,7 @@ const Products = () => {
               <img src={products[selected].src} alt={products[selected].alt} className="max-h-[80vh] w-full object-contain" />
               <div className="p-4 text-center">
                 <h3 className="text-lg font-bold text-foreground">{products[selected].title}</h3>
+                <p className="text-sm text-muted-foreground">{products[selected].application}</p>
               </div>
             </div>
           </div>

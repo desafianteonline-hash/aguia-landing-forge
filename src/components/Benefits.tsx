@@ -1,81 +1,32 @@
-import { Zap, ThermometerSun, TrendingUp, Leaf, Wifi, Volume2, Cpu } from "lucide-react";
-import WhatsAppIcon from "@/components/WhatsAppIcon";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { getWhatsAppUrl } from "@/lib/whatsapp";
+import { Zap, ThermometerSun, Volume2, Shield, Calendar } from "lucide-react";
 
 const benefits = [
-  {
-    icon: Cpu,
-    title: "Full Inverter",
-    description: "Tecnologia 100% inverter para máxima eficiência energética, reduzindo o consumo em até 60%.",
-  },
-  {
-    icon: Wifi,
-    title: "Controle por Wi-Fi",
-    description: "Controle a temperatura da sua piscina de qualquer lugar pelo celular, com total praticidade.",
-  },
-  {
-    icon: Volume2,
-    title: "Super Silencioso",
-    description: "Funcionamento ultrasilencioso que não perturba o ambiente da sua casa ou vizinhança.",
-  },
-  {
-    icon: ThermometerSun,
-    title: "Conforto o Ano Todo",
-    description: "Aproveite sua piscina mesmo no inverno, com temperatura ideal automaticamente controlada.",
-  },
-  {
-    icon: TrendingUp,
-    title: "Valorização do Imóvel",
-    description: "Piscina aquecida agrega valor ao seu imóvel e melhora a qualidade de vida da família.",
-  },
-  {
-    icon: Leaf,
-    title: "Sustentável",
-    description: "Menor impacto ambiental com eficiência energética superior e uso de gás ecológico R-32.",
-  },
+  { icon: Zap, title: "Economia de energia" },
+  { icon: Calendar, title: "Piscina pronta todos os dias" },
+  { icon: ThermometerSun, title: "Temperatura estável" },
+  { icon: Volume2, title: "Baixo ruído" },
+  { icon: Shield, title: "Alta durabilidade" },
 ];
 
 const Benefits = () => {
   return (
-    <section id="beneficios" className="bg-muted px-5 py-14 md:px-4 md:py-28">
+    <section id="beneficios" className="px-5 py-14 md:px-4 md:py-28">
       <div className="container mx-auto max-w-5xl">
-        <div className="mb-10 text-center md:mb-14">
+        <div className="mb-8 text-center md:mb-14">
           <h2 className="mb-4 text-3xl font-extrabold leading-tight text-foreground md:mb-6 md:text-5xl">
-            Por que escolher um
-            <br className="hidden sm:block lg:hidden" />
-            {" "}<span className="text-secondary">Aquecedor Águia Hot</span>?
+            Vantagens do <span className="text-secondary">Aquecimento Inverter</span>
           </h2>
-          <p className="mx-auto max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
-            Tecnologia de ponta para máximo conforto com o menor custo operacional.
-          </p>
         </div>
 
-        <div className="grid gap-4 sm:grid-cols-2 md:gap-6 lg:grid-cols-3">
+        <div className="grid grid-cols-2 gap-4 md:grid-cols-5 md:gap-6">
           {benefits.map((b) => (
-            <Card key={b.title} className="border-none shadow-md transition-shadow hover:shadow-lg">
-              <CardContent className="flex gap-3 p-4 md:gap-4 md:p-6">
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-primary/10 md:h-12 md:w-12">
-                  <b.icon className="h-5 w-5 text-primary md:h-6 md:w-6" />
-                </div>
-                <div>
-                  <h3 className="mb-1 text-base font-semibold text-foreground md:text-lg">{b.title}</h3>
-                  <p className="text-sm leading-relaxed text-muted-foreground">{b.description}</p>
-                </div>
-              </CardContent>
-            </Card>
+            <div key={b.title} className="flex flex-col items-center rounded-2xl border border-border bg-card p-6 text-center shadow-sm">
+              <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
+                <b.icon className="h-6 w-6 text-primary" />
+              </div>
+              <h3 className="text-sm font-semibold text-foreground md:text-base">{b.title}</h3>
+            </div>
           ))}
-        </div>
-
-        <div className="mt-8 text-center md:mt-12">
-          <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer" className="relative inline-block w-full sm:w-auto">
-            <span className="absolute inset-0 animate-ping rounded-md bg-secondary opacity-20" />
-            <Button size="lg" className="relative h-auto min-h-14 w-full gap-2 whitespace-normal bg-secondary px-6 py-4 text-base font-bold text-secondary-foreground hover:bg-secondary/90 sm:w-auto">
-              <WhatsAppIcon className="h-5 w-5" />
-              Quero Economizar — Falar no WhatsApp
-            </Button>
-          </a>
         </div>
       </div>
     </section>

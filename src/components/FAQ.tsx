@@ -1,27 +1,16 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Button } from "@/components/ui/button";
-import WhatsAppIcon from "@/components/WhatsAppIcon";
-import { getWhatsAppUrl } from "@/lib/whatsapp";
 
 const faqs = [
   {
-    q: "Quanto custa para manter um aquecedor de piscina ligado?",
-    a: "Com a tecnologia inverter, o consumo é muito baixo — até 60% mais econômico que aquecedores tradicionais. O custo mensal depende do tamanho da piscina e da região, mas geralmente é surpreendentemente acessível.",
+    q: "Quanto gasta um aquecedor de piscina por mês?",
+    a: "Com a tecnologia inverter, o consumo é muito baixo — até 60% mais econômico que aquecedores tradicionais. O custo mensal depende do tamanho da piscina, mas geralmente é surpreendentemente acessível.",
   },
   {
-    q: "O aquecedor funciona em dias frios ou chuvosos?",
+    q: "O aquecedor funciona em dias frios?",
     a: "Sim! Os aquecedores inverter funcionam eficientemente mesmo em temperaturas mais baixas. O sistema ajusta automaticamente a potência conforme a necessidade.",
   },
   {
-    q: "Qual o prazo de instalação?",
-    a: "Após a aprovação do orçamento, a instalação é geralmente realizada em 3 a 7 dias úteis, dependendo da complexidade do projeto.",
-  },
-  {
-    q: "Qual a garantia do equipamento?",
-    a: "Oferecemos 2 anos de garantia em todos os equipamentos, além de suporte técnico com atendimento rápido para qualquer necessidade.",
-  },
-  {
-    q: "Preciso de alguma adaptação na minha piscina?",
+    q: "Precisa de alguma adaptação na piscina?",
     a: "Na maioria dos casos, a instalação é simples e não requer grandes obras. Nossa equipe avalia o local e orienta sobre qualquer adequação necessária.",
   },
 ];
@@ -32,7 +21,7 @@ const FAQ = () => {
       <div className="container mx-auto max-w-3xl">
         <div className="mb-8 text-center md:mb-14">
           <h2 className="mb-3 text-3xl font-extrabold leading-tight text-foreground md:mb-4 md:text-5xl">
-            Perguntas <span className="text-secondary">Frequentes</span>
+            Dúvidas <span className="text-secondary">Frequentes</span>
           </h2>
         </div>
 
@@ -48,17 +37,6 @@ const FAQ = () => {
             </AccordionItem>
           ))}
         </Accordion>
-
-        <div className="mt-8 text-center md:mt-12">
-          <p className="mb-4 text-sm text-muted-foreground">Ainda tem dúvidas? Fale direto com a gente!</p>
-          <a href={getWhatsAppUrl("Olá! Tenho uma dúvida sobre aquecedores de piscina 🤔")} target="_blank" rel="noopener noreferrer" className="relative inline-block w-full sm:w-auto">
-            <span className="absolute inset-0 animate-ping rounded-md bg-secondary opacity-20" />
-            <Button size="lg" className="relative h-14 w-full gap-2 bg-secondary text-base font-bold text-secondary-foreground hover:bg-secondary/90 sm:w-auto">
-              <WhatsAppIcon className="h-5 w-5" />
-              Tirar Minhas Dúvidas
-            </Button>
-          </a>
-        </div>
       </div>
     </section>
   );
