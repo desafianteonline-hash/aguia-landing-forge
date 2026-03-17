@@ -1,5 +1,8 @@
 import { useState, useCallback, useEffect, useRef } from "react";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
+import { Button } from "@/components/ui/button";
+import { getWhatsAppUrl } from "@/lib/whatsapp";
 import t1 from "@/assets/testimonial-1.jpg";
 import t2 from "@/assets/testimonial-2.jpg";
 import t3 from "@/assets/testimonial-3.jpg";
@@ -57,7 +60,7 @@ const Testimonials = () => {
       <div className="container mx-auto max-w-5xl">
         <div className="mb-8 text-center md:mb-14">
           <h2 className="mb-3 text-3xl font-extrabold leading-tight text-primary-foreground md:mb-4 md:text-5xl">
-            O que nossos clientes dizem
+            Clientes que já <span className="text-secondary">aqueceram</span> suas piscinas
           </h2>
           <p className="mx-auto max-w-2xl text-base text-primary-foreground/70">
             Veja depoimentos reais de quem já investiu em conforto e economia.
@@ -71,14 +74,19 @@ const Testimonials = () => {
               onClick={() => setSelectedIndex(index)}
               className="overflow-hidden rounded-xl border-2 border-primary-foreground/10 transition-transform hover:scale-[1.03] focus:outline-none"
             >
-              <img
-                src={s.src}
-                alt={s.alt}
-                className="h-auto w-full object-cover"
-                loading="lazy"
-              />
+              <img src={s.src} alt={s.alt} className="h-auto w-full object-cover" loading="lazy" />
             </button>
           ))}
+        </div>
+
+        <div className="mt-8 text-center md:mt-12">
+          <a href={getWhatsAppUrl("Olá! Quero esse resultado também 🏊")} target="_blank" rel="noopener noreferrer" className="relative inline-block w-full sm:w-auto">
+            <span className="absolute inset-0 animate-ping rounded-md bg-secondary opacity-20" />
+            <Button size="lg" className="relative h-14 w-full gap-2 bg-secondary px-8 text-base font-bold text-secondary-foreground hover:bg-secondary/90 sm:w-auto">
+              <WhatsAppIcon className="h-5 w-5" />
+              Quero Esse Resultado Também
+            </Button>
+          </a>
         </div>
       </div>
 
@@ -89,41 +97,19 @@ const Testimonials = () => {
           onTouchStart={handleTouchStart}
           onTouchEnd={handleTouchEnd}
         >
-          <button
-            onClick={(e) => { e.stopPropagation(); setSelectedIndex(null); }}
-            className="absolute right-4 top-4 rounded-full bg-white/10 p-2 text-white transition-colors hover:bg-white/20"
-          >
+          <button onClick={(e) => { e.stopPropagation(); setSelectedIndex(null); }} className="absolute right-4 top-4 rounded-full bg-white/10 p-2 text-white transition-colors hover:bg-white/20">
             <X className="h-6 w-6" />
           </button>
-
-          <button
-            onClick={(e) => { e.stopPropagation(); prev(); }}
-            className="absolute left-3 top-1/2 -translate-y-1/2 rounded-full bg-white/20 p-3 text-white shadow-lg backdrop-blur-sm transition-colors hover:bg-white/30 md:left-6"
-          >
+          <button onClick={(e) => { e.stopPropagation(); prev(); }} className="absolute left-3 top-1/2 -translate-y-1/2 rounded-full bg-white/20 p-3 text-white shadow-lg backdrop-blur-sm transition-colors hover:bg-white/30 md:left-6">
             <ChevronLeft className="h-7 w-7 md:h-8 md:w-8" />
           </button>
-
-          <img
-            src={screenshots[selectedIndex].src}
-            alt={screenshots[selectedIndex].alt}
-            className="max-h-[85vh] max-w-full rounded-lg"
-            onClick={(e) => e.stopPropagation()}
-          />
-
-          <button
-            onClick={(e) => { e.stopPropagation(); next(); }}
-            className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-white/20 p-3 text-white shadow-lg backdrop-blur-sm transition-colors hover:bg-white/30 md:right-6"
-          >
+          <img src={screenshots[selectedIndex].src} alt={screenshots[selectedIndex].alt} className="max-h-[85vh] max-w-full rounded-lg" onClick={(e) => e.stopPropagation()} />
+          <button onClick={(e) => { e.stopPropagation(); next(); }} className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-white/20 p-3 text-white shadow-lg backdrop-blur-sm transition-colors hover:bg-white/30 md:right-6">
             <ChevronRight className="h-7 w-7 md:h-8 md:w-8" />
           </button>
-
           <div className="absolute bottom-6 flex gap-2">
             {screenshots.map((_, i) => (
-              <button
-                key={i}
-                onClick={(e) => { e.stopPropagation(); setSelectedIndex(i); }}
-                className={`h-2 w-2 rounded-full transition-colors ${i === selectedIndex ? "bg-white" : "bg-white/40"}`}
-              />
+              <button key={i} onClick={(e) => { e.stopPropagation(); setSelectedIndex(i); }} className={`h-2 w-2 rounded-full transition-colors ${i === selectedIndex ? "bg-white" : "bg-white/40"}`} />
             ))}
           </div>
         </div>

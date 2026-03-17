@@ -1,14 +1,11 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import Benefits from "@/components/Benefits";
-import Authority from "@/components/Authority";
-import Services from "@/components/Services";
 import Products from "@/components/Products";
-import Audience from "@/components/Audience";
+import HowItWorks from "@/components/HowItWorks";
+import Comparison from "@/components/Comparison";
 import Testimonials from "@/components/Testimonials";
-import Differentials from "@/components/Differentials";
+import Benefits from "@/components/Benefits";
 import FAQ from "@/components/FAQ";
-import Guarantee from "@/components/Guarantee";
 import CTAFinal from "@/components/CTAFinal";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
@@ -18,15 +15,12 @@ const Index = () => {
     <main>
       <Navbar />
       <Hero />
-      <Benefits />
-      <Authority />
-      <Services />
       <Products />
+      <HowItWorks />
+      <Comparison />
       <Testimonials />
-      <Audience />
-      <Differentials />
+      <Benefits />
       <FAQ />
-      <Guarantee />
       <CTAFinal />
       <Footer />
       <WhatsAppFloat />
