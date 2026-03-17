@@ -49,7 +49,7 @@ const Products = () => {
       <div className="container mx-auto max-w-6xl">
         <div className="mb-8 text-center md:mb-14">
           <h2 className="mb-3 text-3xl font-extrabold leading-tight text-foreground md:mb-4 md:text-5xl">
-            Nossos <span className="text-secondary">Aquecedores</span> para Piscina
+            Aquecedores <span className="text-secondary">Águia Hot</span> para sua Piscina
           </h2>
           <p className="mx-auto max-w-2xl text-base text-muted-foreground">
             Equipamentos de alta eficiência com tecnologia inverter para diferentes tamanhos de piscina.
