@@ -33,7 +33,7 @@ const Comparison = () => {
       <div className="container mx-auto max-w-4xl">
         <div className="mb-8 text-center md:mb-14">
           <h2 className="mb-3 text-3xl font-extrabold leading-tight text-foreground md:mb-4 md:text-5xl">
-            Por Que o <span className="text-secondary">Inverter</span> é a Melhor Escolha
+            Por Que o aquecedor elétrico Inverter <span className="text-secondary">Águia Hot</span> é a Melhor Escolha
           </h2>
         </div>
 
