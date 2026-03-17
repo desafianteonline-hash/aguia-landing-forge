@@ -5,6 +5,7 @@ import Products from "@/components/Products";
 import HowItWorks from "@/components/HowItWorks";
 import Comparison from "@/components/Comparison";
 import Testimonials from "@/components/Testimonials";
+import AboutUs from "@/components/AboutUs";
 import Benefits from "@/components/Benefits";
 import FAQ from "@/components/FAQ";
 import CTAFinal from "@/components/CTAFinal";
@@ -21,6 +22,7 @@ const Index = () => {
       <Comparison />
       <Testimonials />
       <PainPoint />
+      <AboutUs />
       <Benefits />
       <FAQ />
       <CTAFinal />
