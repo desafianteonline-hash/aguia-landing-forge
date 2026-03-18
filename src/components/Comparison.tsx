@@ -51,7 +51,7 @@ const Comparison = () => {
             <tbody>
               {rows.map((row, i) => (
                 <tr key={i} className={i % 2 === 0 ? "" : "bg-muted/30"}>
-                  <td className="p-4 text-sm font-medium text-foreground">{row.feature}</td>
+                  <td className="p-5 text-base font-medium text-foreground">{row.feature}</td>
                   <td className="border-l border-r border-border bg-green-50/60 p-4"><div className="flex justify-center"><StatusLabel {...row.inverter} /></div></td>
                   <td className="border-r border-border bg-red-50/60 p-4"><div className="flex justify-center"><StatusLabel {...row.solar} /></div></td>
                   <td className="bg-red-50/60 p-4"><div className="flex justify-center"><StatusLabel {...row.gas} /></div></td>
