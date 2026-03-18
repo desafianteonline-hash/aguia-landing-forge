@@ -66,6 +66,10 @@
     line-height: 1.1;
   }
 
+  button, [role="button"] {
+    text-transform: uppercase;
+  }
+
   p, li, label {
     line-height: 1.8;
     font-size: 1.25rem;
