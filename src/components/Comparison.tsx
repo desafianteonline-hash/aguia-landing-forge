@@ -46,8 +46,8 @@ const Comparison = () => {
                   <span className="hidden md:inline">Inverter Elétrico ÁGUIA HOT</span>
                   <span className="md:hidden">Águia Hot</span>
                 </th>
-                <th className="w-[22%] border-r border-border bg-red-50 p-2 text-center text-xs font-semibold text-foreground md:w-auto md:p-5 md:text-base">Solar</th>
-                <th className="w-[22%] bg-red-50 p-2 text-center text-xs font-semibold text-foreground md:w-auto md:p-5 md:text-base">Gás</th>
+                <th className="w-[22%] border-r border-border bg-red-50 p-2 text-center text-xs font-bold uppercase text-foreground md:w-auto md:p-5 md:text-base">Solar</th>
+                <th className="w-[22%] bg-red-50 p-2 text-center text-xs font-bold uppercase text-foreground md:w-auto md:p-5 md:text-base">Gás</th>
               </tr>
             </thead>
             <tbody>
