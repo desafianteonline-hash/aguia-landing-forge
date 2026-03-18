@@ -15,7 +15,7 @@ const Benefits = () => {
       <div className="container mx-auto max-w-5xl">
         <div className="mb-8 text-center md:mb-14">
           <h2 className="mb-4 text-4xl font-extrabold leading-tight text-foreground md:mb-6 md:text-5xl">
-            Vantagens do <span className="text-secondary">Aquecimento Inverter</span>
+            Vantagens dos Aquecedores Inverter <span className="text-secondary">Águia Hot</span>
           </h2>
         </div>
 
