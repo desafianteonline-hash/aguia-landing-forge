@@ -59,10 +59,10 @@ const Testimonials = () => {
     <section id="depoimentos" className="bg-primary px-5 py-14 md:px-4 md:py-28">
       <div className="container mx-auto max-w-5xl">
         <div className="mb-8 text-center md:mb-14">
-          <h2 className="mb-3 text-3xl font-extrabold leading-tight text-primary-foreground md:mb-4 md:text-5xl">
+          <h2 className="mb-4 text-4xl font-extrabold leading-tight text-primary-foreground md:mb-6 md:text-5xl">
             Clientes que já <span className="text-secondary">aqueceram</span> suas piscinas
           </h2>
-          <p className="mx-auto max-w-2xl text-base text-primary-foreground/70">
+          <p className="mx-auto max-w-2xl text-lg text-primary-foreground/70 md:text-xl">
             Veja depoimentos reais de quem já investiu em conforto e economia.
           </p>
         </div>

@@ -7,13 +7,13 @@ const CTAFinal = () => {
   return (
     <section className="bg-primary px-5 py-14 md:px-4 md:py-28">
       <div className="container mx-auto max-w-3xl text-center">
-        <h2 className="mb-3 text-3xl font-extrabold leading-tight text-primary-foreground md:mb-4 md:text-5xl">
+        <h2 className="mb-4 text-4xl font-extrabold leading-tight text-primary-foreground md:mb-6 md:text-5xl">
           Pronto para aproveitar sua piscina
           <br />
           <span className="text-secondary">o ano todo?</span>
         </h2>
 
-        <p className="mx-auto mb-8 max-w-xl text-sm text-primary-foreground/80 md:mb-10 md:text-lg">
+        <p className="mx-auto mb-8 max-w-xl text-lg text-primary-foreground/80 md:mb-10 md:text-xl">
           Fale com um especialista e descubra o melhor sistema para sua piscina.
         </p>
 

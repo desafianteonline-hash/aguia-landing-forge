@@ -8,11 +8,11 @@ const PainPoint = () => {
           <Thermometer className="h-7 w-7 text-secondary md:h-8 md:w-8" />
         </div>
 
-        <h2 className="mb-6 text-3xl font-extrabold leading-tight text-foreground md:mb-8 md:text-5xl">
+        <h2 className="mb-8 text-4xl font-extrabold leading-tight text-foreground md:mb-10 md:text-5xl">
           Piscina Linda… <span className="text-secondary">Mas Gelada?</span>
         </h2>
 
-        <div className="mx-auto max-w-2xl space-y-4 text-base leading-relaxed text-muted-foreground md:space-y-5 md:text-lg">
+        <div className="mx-auto max-w-2xl space-y-6 text-lg leading-relaxed text-muted-foreground md:space-y-7 md:text-xl">
           <p>
             Você investiu em uma área de lazer completa, construiu uma piscina incrível e imaginou momentos de diversão com a família e amigos.
           </p>

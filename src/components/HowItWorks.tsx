@@ -29,10 +29,10 @@ const HowItWorks = () => {
     <section id="como-funciona" className="px-5 py-14 md:px-4 md:py-28">
       <div className="container mx-auto max-w-5xl">
         <div className="mb-8 text-center md:mb-14">
-          <h2 className="mb-3 text-3xl font-extrabold leading-tight text-foreground md:mb-4 md:text-5xl">
+          <h2 className="mb-4 text-4xl font-extrabold leading-tight text-foreground md:mb-6 md:text-5xl">
             Como funcionam os aquecedores <span className="text-secondary">Águia Hot</span>
           </h2>
-          <p className="mx-auto max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
+          <p className="mx-auto max-w-2xl text-lg leading-relaxed text-muted-foreground md:text-xl">
             O aquecedor elétrico inverter capta o calor do ar e transfere para a água da piscina, aquecendo de forma eficiente e econômica. Ele ajusta automaticamente o funcionamento para manter a temperatura estável, evitando desperdício de energia.
           </p>
         </div>
@@ -43,9 +43,9 @@ const HowItWorks = () => {
               <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-primary">
                 <step.icon className="h-7 w-7 text-primary-foreground" />
               </div>
-              <span className="mb-2 block text-sm font-bold text-secondary">{step.number}</span>
-              <h3 className="mb-2 text-lg font-bold text-foreground">{step.title}</h3>
-              <p className="text-sm leading-relaxed text-muted-foreground">{step.description}</p>
+              <span className="mb-2 block text-base font-bold text-secondary">{step.number}</span>
+              <h3 className="mb-2 text-xl font-bold text-foreground">{step.title}</h3>
+              <p className="text-base leading-relaxed text-muted-foreground">{step.description}</p>
             </div>
           ))}
         </div>

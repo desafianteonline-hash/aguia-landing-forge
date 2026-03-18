@@ -31,15 +31,15 @@ const Hero = () => {
             <span className="text-secondary">Aproveite Sua Piscina o Ano Inteiro.</span>
           </h1>
 
-          <p className="mb-6 max-w-xl text-base text-primary-foreground/90 md:mb-8 md:text-xl">
+          <p className="mb-6 max-w-xl text-lg text-primary-foreground/90 md:mb-8 md:text-xl">
             Instalação profissional de aquecimento para piscina com tecnologia inverter que mantém a água sempre na temperatura ideal com baixo consumo de energia.
           </p>
 
-          <div className="mb-8 flex flex-col gap-2 md:mb-10">
+          <div className="mb-8 flex flex-col gap-3 md:mb-10">
             {proofs.map((proof) => (
               <div key={proof} className="flex items-center gap-2 text-primary-foreground">
-                <CheckCircle className="h-4 w-4 shrink-0 text-secondary md:h-5 md:w-5" />
-                <span className="text-sm md:text-base">{proof}</span>
+                <CheckCircle className="h-5 w-5 shrink-0 text-secondary md:h-5 md:w-5" />
+                <span className="text-base md:text-lg">{proof}</span>
               </div>
             ))}
           </div>

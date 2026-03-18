@@ -55,10 +55,10 @@ const AboutUs = () => {
       <div className="container mx-auto max-w-6xl">
         {/* Header */}
         <div className="mb-10 text-center md:mb-16">
-          <h2 className="mb-4 text-3xl font-extrabold leading-tight text-primary-foreground md:text-5xl">
+          <h2 className="mb-4 text-4xl font-extrabold leading-tight text-primary-foreground md:mb-6 md:text-5xl">
             Conheça a <span className="text-secondary">Águia Hot</span>
           </h2>
-          <p className="mx-auto max-w-2xl text-base text-primary-foreground/80 md:text-lg">
+          <p className="mx-auto max-w-2xl text-lg text-primary-foreground/80 md:text-xl">
             Somos especialistas em aquecimento de piscina com tecnologia inverter, levando conforto e economia para centenas de famílias em todo o Brasil.
           </p>
         </div>
