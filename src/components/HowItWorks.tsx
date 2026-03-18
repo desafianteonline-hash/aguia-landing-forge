@@ -7,8 +7,8 @@ const steps = [
   {
     icon: Wind,
     number: "01",
-    title: "Captação de calor do ambiente",
-    description: "O equipamento capta o calor presente no ar ao redor.",
+    title: "Captação de energia térmica",
+    description: "O sistema extrai energia térmica do ar externo, funcionando com alta eficiência mesmo em dias frios.",
   },
   {
     icon: Flame,
