@@ -6,30 +6,30 @@ import { getWhatsAppUrl } from "@/lib/whatsapp";
 type Status = "yes" | "no" | "partial";
 
 const StatusIcon = ({ status }: { status: Status }) => {
-  if (status === "yes") return <Check className="h-6 w-6 text-green-600" />;
-  if (status === "no") return <X className="h-6 w-6 text-red-500" />;
-  return <AlertTriangle className="h-5 w-5 text-yellow-500" />;
+  if (status === "yes") return <Check className="h-5 w-5 text-green-600 md:h-6 md:w-6" />;
+  if (status === "no") return <X className="h-5 w-5 text-red-500 md:h-6 md:w-6" />;
+  return <AlertTriangle className="h-4 w-4 text-yellow-500 md:h-5 md:w-5" />;
 };
 
-const StatusLabel = ({ status, label }: { status: Status; label: string }) => (
-  <div className="flex items-center gap-1.5">
+const rows = [
+  { feature: "Dias frios", inverter: { status: "yes" as Status, label: "Sim" }, solar: { status: "no" as Status, label: "Não" }, gas: { status: "yes" as Status, label: "Sim" } },
+  { feature: "À noite", inverter: { status: "yes" as Status, label: "Sim" }, solar: { status: "no" as Status, label: "Não" }, gas: { status: "yes" as Status, label: "Sim" } },
+  { feature: "Consumo", inverter: { status: "yes" as Status, label: "Baixo" }, solar: { status: "yes" as Status, label: "Baixo" }, gas: { status: "no" as Status, label: "Alto" } },
+  { feature: "Temperatura", inverter: { status: "yes" as Status, label: "Preciso" }, solar: { status: "no" as Status, label: "Instável" }, gas: { status: "partial" as Status, label: "Médio" } },
+  { feature: "Clima", inverter: { status: "no" as Status, label: "Não depende" }, solar: { status: "partial" as Status, label: "Depende" }, gas: { status: "no" as Status, label: "Não depende" } },
+  { feature: "Conforto", inverter: { status: "yes" as Status, label: "Alto" }, solar: { status: "no" as Status, label: "Baixo" }, gas: { status: "partial" as Status, label: "Médio" } },
+];
+
+const Cell = ({ status, label }: { status: Status; label: string }) => (
+  <div className="flex flex-col items-center gap-0.5">
     <StatusIcon status={status} />
-    <span className="text-base font-medium">{label}</span>
+    <span className="text-xs font-medium md:text-base">{label}</span>
   </div>
 );
 
-const rows: { feature: string; inverter: { status: Status; label: string }; solar: { status: Status; label: string }; gas: { status: Status; label: string } }[] = [
-  { feature: "Funciona em dias frios", inverter: { status: "yes", label: "Sim" }, solar: { status: "no", label: "Não" }, gas: { status: "yes", label: "Sim" } },
-  { feature: "Funciona à noite", inverter: { status: "yes", label: "Sim" }, solar: { status: "no", label: "Não" }, gas: { status: "yes", label: "Sim" } },
-  { feature: "Consumo", inverter: { status: "yes", label: "Baixo" }, solar: { status: "yes", label: "Baixo" }, gas: { status: "no", label: "Alto" } },
-  { feature: "Controle de temperatura", inverter: { status: "yes", label: "Preciso" }, solar: { status: "no", label: "Instável" }, gas: { status: "partial", label: "Médio" } },
-  { feature: "Dependência do clima", inverter: { status: "no", label: "Não" }, solar: { status: "partial", label: "Alta" }, gas: { status: "no", label: "Não" } },
-  { feature: "Conforto", inverter: { status: "yes", label: "Alto" }, solar: { status: "no", label: "Baixo" }, gas: { status: "partial", label: "Médio" } },
-];
-
 const Comparison = () => {
   return (
-    <section className="bg-muted px-5 py-14 md:px-4 md:py-28">
+    <section className="bg-muted px-2 py-14 md:px-4 md:py-28">
       <div className="container mx-auto max-w-4xl">
         <div className="mb-8 text-center md:mb-14">
           <h2 className="mb-4 text-4xl font-extrabold leading-tight text-foreground md:mb-6 md:text-5xl">
@@ -37,24 +37,32 @@ const Comparison = () => {
           </h2>
         </div>
 
-        {/* Single table for all screen sizes */}
-        <div className="overflow-x-auto overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
-          <table className="w-full min-w-[500px]">
+        <div className="overflow-hidden rounded-xl border border-border bg-card shadow-sm md:rounded-2xl">
+          <table className="w-full table-fixed">
             <thead>
               <tr className="border-b border-border">
-                <th className="p-4 text-left text-base font-semibold text-foreground md:p-5">Característica</th>
-                <th className="border-l border-r border-border bg-green-50 p-4 text-center text-base font-bold text-primary md:p-5">Inverter Elétrico ÁGUIA HOT</th>
-                <th className="border-r border-border bg-red-50 p-4 text-center text-base font-semibold text-foreground md:p-5">Solar</th>
-                <th className="bg-red-50 p-4 text-center text-base font-semibold text-foreground md:p-5">Gás</th>
+                <th className="w-[28%] p-2 text-left text-xs font-semibold text-foreground md:w-auto md:p-5 md:text-base"></th>
+                <th className="w-[28%] border-l border-r border-border bg-green-50 p-2 text-center text-xs font-bold text-primary md:w-auto md:p-5 md:text-base">
+                  <span className="hidden md:inline">Inverter Elétrico ÁGUIA HOT</span>
+                  <span className="md:hidden">Águia Hot</span>
+                </th>
+                <th className="w-[22%] border-r border-border bg-red-50 p-2 text-center text-xs font-semibold text-foreground md:w-auto md:p-5 md:text-base">Solar</th>
+                <th className="w-[22%] bg-red-50 p-2 text-center text-xs font-semibold text-foreground md:w-auto md:p-5 md:text-base">Gás</th>
               </tr>
             </thead>
             <tbody>
               {rows.map((row, i) => (
                 <tr key={i} className={i % 2 === 0 ? "" : "bg-muted/30"}>
-                  <td className="p-4 text-base font-medium text-foreground md:p-5">{row.feature}</td>
-                  <td className="border-l border-r border-border bg-green-50/60 p-4 md:p-5"><div className="flex justify-center"><StatusLabel {...row.inverter} /></div></td>
-                  <td className="border-r border-border bg-red-50/60 p-4 md:p-5"><div className="flex justify-center"><StatusLabel {...row.solar} /></div></td>
-                  <td className="bg-red-50/60 p-4 md:p-5"><div className="flex justify-center"><StatusLabel {...row.gas} /></div></td>
+                  <td className="p-2 text-xs font-medium text-foreground md:p-5 md:text-base">{row.feature}</td>
+                  <td className="border-l border-r border-border bg-green-50/60 p-2 md:p-5">
+                    <div className="flex justify-center"><Cell {...row.inverter} /></div>
+                  </td>
+                  <td className="border-r border-border bg-red-50/60 p-2 md:p-5">
+                    <div className="flex justify-center"><Cell {...row.solar} /></div>
+                  </td>
+                  <td className="bg-red-50/60 p-2 md:p-5">
+                    <div className="flex justify-center"><Cell {...row.gas} /></div>
+                  </td>
                 </tr>
               ))}
             </tbody>
