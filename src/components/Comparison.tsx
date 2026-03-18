@@ -68,7 +68,7 @@ const Comparison = () => {
               <p className="mb-3 text-sm font-semibold text-foreground">{row.feature}</p>
               <div className="grid grid-cols-3 gap-2 text-center">
                 <div>
-                  <p className="mb-1 text-xs font-bold text-primary">Inverter</p>
+                  <p className="mb-1 text-xs font-bold text-primary">Inverter Águia Hot</p>
                   <div className="flex justify-center"><StatusLabel {...row.inverter} /></div>
                 </div>
                 <div>
