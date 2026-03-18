@@ -14,7 +14,7 @@ const PainPoint = () => {
 
         <div className="mx-auto max-w-2xl space-y-6 text-lg leading-relaxed text-muted-foreground md:space-y-7 md:text-xl">
           <p>
-            <span className="bg-secondary/30 px-1">Você investiu em uma área de lazer completa, construiu uma piscina incrível e imaginou momentos de diversão com a família e amigos.</span>
+            <span className="bg-secondary/30 px-1 text-foreground">Você investiu em uma área de lazer completa, construiu uma piscina incrível e imaginou momentos de diversão com a família e amigos.</span>
           </p>
           <p>
             Mas na prática, em muitos dias do ano, a água da piscina fica <strong className="text-foreground">fria demais para aproveitar</strong>.
