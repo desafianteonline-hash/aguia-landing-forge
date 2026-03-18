@@ -2,7 +2,7 @@ import { CheckCircle } from "lucide-react";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { Button } from "@/components/ui/button";
 import { getWhatsAppUrl } from "@/lib/whatsapp";
-import heroImage from "@/assets/image-23.png";
+import heroImage from "@/assets/hero-pool.jpg";
 
 const proofs = [
   "Piscina aquecida o ano inteiro",
