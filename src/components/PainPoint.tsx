@@ -9,7 +9,7 @@ const PainPoint = () => {
         </div>
 
         <h2 className="mb-8 text-4xl font-extrabold leading-tight text-foreground md:mb-10 md:text-5xl">
-          Piscina Linda… <span className="text-secondary">Mas é Gelada?</span>
+          Sua Piscina é Linda… <span className="text-secondary">Mas é Gelada?</span>
         </h2>
 
         <div className="mx-auto max-w-2xl space-y-6 text-lg leading-relaxed text-muted-foreground md:space-y-7 md:text-xl">
