@@ -1,11 +1,12 @@
-import { Zap, ThermometerSun, Volume2, Shield, Calendar } from "lucide-react";
+import { Zap, ThermometerSun, Volume2, Shield, Calendar, Wifi } from "lucide-react";
 
 const benefits = [
   { icon: Zap, title: "Economia de energia" },
-  { icon: Calendar, title: "Piscina pronta todos os dias" },
+  { icon: Calendar, title: "Piscina aquecida todos os dias e noites" },
   { icon: ThermometerSun, title: "Temperatura estável" },
   { icon: Volume2, title: "Baixo ruído" },
   { icon: Shield, title: "Alta durabilidade" },
+  { icon: Wifi, title: "Controle por Wi-Fi" },
 ];
 
 const Benefits = () => {
@@ -18,7 +19,7 @@ const Benefits = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-2 gap-4 md:grid-cols-5 md:gap-6">
+        <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-6">
           {benefits.map((b) => (
             <div key={b.title} className="flex flex-col items-center rounded-2xl border border-border bg-card p-6 text-center shadow-sm">
               <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
