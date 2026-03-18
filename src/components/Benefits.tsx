@@ -6,7 +6,7 @@ const benefits = [
   { icon: ThermometerSun, title: "Temperatura estável" },
   { icon: Volume2, title: "Baixo ruído" },
   { icon: Shield, title: "Alta durabilidade" },
-  { icon: Wifi, title: "Controle por Wi-Fi" },
+  { icon: Wifi, title: "Controle Wi\u2011Fi" },
 ];
 
 const Benefits = () => {
