@@ -43,7 +43,7 @@ const CountUp = ({ target, prefix, format, duration = 2000 }: { target: number; 
   }, [started, target, duration]);
 
   return (
-    <span ref={ref} className="text-3xl font-extrabold text-secondary md:text-4xl">
+    <span ref={ref} className="text-3xl font-extrabold text-primary-foreground md:text-4xl">
       {prefix}{formatNum(count, format)}
     </span>
   );
