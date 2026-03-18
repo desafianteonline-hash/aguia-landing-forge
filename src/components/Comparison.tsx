@@ -41,20 +41,20 @@ const Comparison = () => {
         <div className="hidden overflow-hidden rounded-2xl border border-border bg-card shadow-sm md:block">
           <table className="w-full">
             <thead>
-              <tr className="border-b border-border bg-primary/5">
+              <tr className="border-b border-border">
                 <th className="p-4 text-left text-sm font-semibold text-foreground">Característica</th>
-                <th className="p-4 text-center text-sm font-bold text-primary">Inverter Elétrico ÁGUIA HOT</th>
-                <th className="p-4 text-center text-sm font-semibold text-foreground">Solar</th>
-                <th className="p-4 text-center text-sm font-semibold text-foreground">Gás</th>
+                <th className="bg-green-50 p-4 text-center text-sm font-bold text-primary">Inverter Elétrico ÁGUIA HOT</th>
+                <th className="bg-red-50 p-4 text-center text-sm font-semibold text-foreground">Solar</th>
+                <th className="bg-red-50 p-4 text-center text-sm font-semibold text-foreground">Gás</th>
               </tr>
             </thead>
             <tbody>
               {rows.map((row, i) => (
                 <tr key={i} className={i % 2 === 0 ? "" : "bg-muted/30"}>
                   <td className="p-4 text-sm font-medium text-foreground">{row.feature}</td>
-                  <td className="p-4"><div className="flex justify-center"><StatusLabel {...row.inverter} /></div></td>
-                  <td className="p-4"><div className="flex justify-center"><StatusLabel {...row.solar} /></div></td>
-                  <td className="p-4"><div className="flex justify-center"><StatusLabel {...row.gas} /></div></td>
+                  <td className="bg-green-50/60 p-4"><div className="flex justify-center"><StatusLabel {...row.inverter} /></div></td>
+                  <td className="bg-red-50/60 p-4"><div className="flex justify-center"><StatusLabel {...row.solar} /></div></td>
+                  <td className="bg-red-50/60 p-4"><div className="flex justify-center"><StatusLabel {...row.gas} /></div></td>
                 </tr>
               ))}
             </tbody>
