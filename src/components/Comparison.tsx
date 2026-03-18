@@ -42,9 +42,9 @@ const Comparison = () => {
             <thead>
               <tr className="border-b border-border">
                 <th className="w-[28%] p-2 text-left text-xs font-semibold text-foreground md:w-auto md:p-5 md:text-base"></th>
-                <th className="w-[28%] border-l border-r border-border bg-green-50 p-2 text-center text-xs font-bold text-primary md:w-auto md:p-5 md:text-base">
+                <th className="w-[28%] border-l border-r border-border bg-green-50 p-2 text-center text-xs font-bold uppercase text-primary md:w-auto md:p-5 md:text-base">
                   <span className="hidden md:inline">Inverter Elétrico ÁGUIA HOT</span>
-                  <span className="md:hidden">Águia Hot</span>
+                  <span className="md:hidden">ÁGUIA HOT</span>
                 </th>
                 <th className="w-[22%] border-r border-border bg-red-50 p-2 text-center text-xs font-bold uppercase text-foreground md:w-auto md:p-5 md:text-base">Solar</th>
                 <th className="w-[22%] bg-red-50 p-2 text-center text-xs font-bold uppercase text-foreground md:w-auto md:p-5 md:text-base">Gás</th>
