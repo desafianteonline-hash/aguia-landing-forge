@@ -25,10 +25,10 @@ const Hero = () => {
 
       <div className="container relative mx-auto flex min-h-[70vh] max-w-5xl items-center px-5 pt-20 pb-12 md:min-h-[90vh] md:px-4 md:py-20">
         <div className="max-w-2xl">
-          <h1 className="mb-6 text-4xl tracking-tight text-primary-foreground md:mb-8 md:text-5xl lg:text-6xl" style={{ lineHeight: 1.15, fontWeight: 900 }}>
+          <h1 className="mb-6 text-4xl text-primary-foreground md:mb-8 md:text-5xl lg:text-6xl" style={{ lineHeight: 1.15, fontWeight: 900 }}>
             Chega de Piscina Fria.
           </h1>
-          <h1 className="mb-6 text-4xl tracking-tight text-secondary md:mb-8 md:text-5xl lg:text-6xl" style={{ lineHeight: 1.15, fontWeight: 900 }}>
+          <h1 className="mb-6 text-4xl text-secondary md:mb-8 md:text-5xl lg:text-6xl" style={{ lineHeight: 1.15, fontWeight: 900 }}>
             Aproveite Sua Piscina o Ano Inteiro.
           </h1>
 
