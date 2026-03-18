@@ -32,7 +32,7 @@ const Comparison = () => {
     <section className="bg-muted px-5 py-14 md:px-4 md:py-28">
       <div className="container mx-auto max-w-4xl">
         <div className="mb-8 text-center md:mb-14">
-          <h2 className="mb-3 text-3xl font-extrabold leading-tight text-foreground md:mb-4 md:text-5xl">
+          <h2 className="mb-4 text-4xl font-extrabold leading-tight text-foreground md:mb-6 md:text-5xl">
             Por Que o aquecedor elétrico Inverter <span className="text-secondary">Águia Hot</span> é a Melhor Escolha
           </h2>
         </div>

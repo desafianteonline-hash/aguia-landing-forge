@@ -20,7 +20,7 @@ const FAQ = () => {
     <section id="faq" className="px-5 py-14 md:px-4 md:py-28">
       <div className="container mx-auto max-w-3xl">
         <div className="mb-8 text-center md:mb-14">
-          <h2 className="mb-3 text-3xl font-extrabold leading-tight text-foreground md:mb-4 md:text-5xl">
+          <h2 className="mb-4 text-4xl font-extrabold leading-tight text-foreground md:mb-6 md:text-5xl">
             Dúvidas <span className="text-secondary">Frequentes</span>
           </h2>
         </div>
