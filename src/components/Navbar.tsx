@@ -122,7 +122,7 @@ const Navbar = () => {
                 onClick={() => setMobileOpen(false)}
               >
                 <Button className="h-12 w-full gap-2 bg-secondary text-sm font-bold text-secondary-foreground hover:bg-secondary/90">
-                  <WhatsAppIcon className="h-5 w-5 shrink-0" />
+                  <WhatsAppIcon className="h-8 w-8 shrink-0" />
                   Solicitar Orçamento Grátis
                 </Button>
               </a>

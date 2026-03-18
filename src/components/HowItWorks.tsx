@@ -54,7 +54,7 @@ const HowItWorks = () => {
           <a href={getWhatsAppUrl("Olá! Quero aquecer minha piscina 🏊‍♂️")} target="_blank" rel="noopener noreferrer" className="relative inline-block w-full sm:w-auto">
             <span className="absolute inset-0 animate-ping rounded-md bg-secondary opacity-20" />
             <Button size="lg" className="relative h-14 w-full gap-2 bg-secondary px-8 text-base font-bold text-secondary-foreground hover:bg-secondary/90 sm:w-auto">
-              <WhatsAppIcon className="h-5 w-5" />
+              <WhatsAppIcon className="h-8 w-8" />
               Quero Aquecer Minha Piscina
             </Button>
           </a>
