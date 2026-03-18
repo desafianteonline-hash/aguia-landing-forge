@@ -48,7 +48,7 @@ const Hero = () => {
           <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer" className="relative inline-block">
             <span className="absolute inset-0 animate-ping rounded-md bg-secondary opacity-20" />
             <Button size="lg" className="relative h-12 gap-2 bg-secondary px-6 text-sm font-bold uppercase text-secondary-foreground shadow-lg hover:bg-secondary/90 md:h-16 md:gap-3 md:px-10 md:text-lg">
-              <WhatsAppIcon className="h-5 w-5 md:h-6 md:w-6" />
+              <WhatsAppIcon className="h-8 w-8 md:h-10 md:w-10" />
               Solicitar Orçamento no WhatsApp
             </Button>
           </a>

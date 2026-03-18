@@ -77,7 +77,7 @@ const Comparison = () => {
           <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer" className="relative inline-block w-full sm:w-auto">
             <span className="absolute inset-0 animate-ping rounded-md bg-secondary opacity-20" />
             <Button size="lg" className="relative h-14 w-full gap-2 bg-secondary px-8 text-lg font-bold text-secondary-foreground hover:bg-secondary/90 sm:w-auto">
-              <WhatsAppIcon className="h-5 w-5" />
+              <WhatsAppIcon className="h-8 w-8" />
               Solicitar Orçamento Agora
             </Button>
           </a>
