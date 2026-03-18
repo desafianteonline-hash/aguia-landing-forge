@@ -36,7 +36,7 @@ const products = [
 ];
 
 const miniBenefits = [
-  "Alta eficiência energética",
+  "Mais economia energética",
   "Funcionamento silencioso",
   "Longa durabilidade",
 ];
