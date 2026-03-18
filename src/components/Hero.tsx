@@ -25,12 +25,14 @@ const Hero = () => {
 
       <div className="container relative mx-auto flex min-h-[70vh] max-w-5xl items-center px-5 pt-20 pb-12 md:min-h-[90vh] md:px-4 md:py-20">
         <div className="max-w-2xl">
-          <h1 className="mb-4 text-3xl font-extrabold tracking-tight text-primary-foreground md:mb-6 md:text-5xl lg:text-6xl" style={{ lineHeight: 1 }}>
-            Chega de Piscina Fria.{" "}
-            <span className="text-secondary">Aproveite Sua Piscina o Ano Inteiro.</span>
+          <h1 className="mb-6 text-4xl tracking-tight text-primary-foreground md:mb-8 md:text-5xl lg:text-6xl" style={{ lineHeight: 1.15, fontWeight: 900 }}>
+            Chega de Piscina Fria.
+          </h1>
+          <h1 className="mb-6 text-4xl tracking-tight text-secondary md:mb-8 md:text-5xl lg:text-6xl" style={{ lineHeight: 1.15, fontWeight: 900 }}>
+            Aproveite Sua Piscina o Ano Inteiro.
           </h1>
 
-          <p className="mb-6 max-w-xl text-lg text-primary-foreground/90 md:mb-8 md:text-xl">
+          <p className="mb-6 max-w-xl text-xl text-primary-foreground/90 md:mb-8 md:text-2xl" style={{ lineHeight: 1.6 }}>
             Instalação profissional de aquecimento para piscina com tecnologia inverter que mantém a água sempre na temperatura ideal com baixo consumo de energia.
           </p>
 

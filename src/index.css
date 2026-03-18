@@ -62,8 +62,9 @@
   h1, h2 {
     text-transform: uppercase;
     font-weight: 900;
-    -webkit-text-stroke: 0.5px currentColor;
-    line-height: 1.1;
+    -webkit-text-stroke: 1px currentColor;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
   }
 
   button, [role="button"] {
