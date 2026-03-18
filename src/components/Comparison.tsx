@@ -6,15 +6,15 @@ import { getWhatsAppUrl } from "@/lib/whatsapp";
 type Status = "yes" | "no" | "partial";
 
 const StatusIcon = ({ status }: { status: Status }) => {
-  if (status === "yes") return <Check className="h-5 w-5 text-green-600" />;
-  if (status === "no") return <X className="h-5 w-5 text-red-500" />;
-  return <AlertTriangle className="h-4 w-4 text-yellow-500" />;
+  if (status === "yes") return <Check className="h-6 w-6 text-green-600" />;
+  if (status === "no") return <X className="h-6 w-6 text-red-500" />;
+  return <AlertTriangle className="h-5 w-5 text-yellow-500" />;
 };
 
 const StatusLabel = ({ status, label }: { status: Status; label: string }) => (
   <div className="flex items-center gap-1.5">
     <StatusIcon status={status} />
-    <span className="text-base md:text-lg">{label}</span>
+    <span className="text-base font-medium">{label}</span>
   </div>
 );
 
@@ -37,51 +37,28 @@ const Comparison = () => {
           </h2>
         </div>
 
-        {/* Desktop table */}
-        <div className="hidden overflow-hidden rounded-2xl border border-border bg-card shadow-sm md:block">
-          <table className="w-full">
+        {/* Single table for all screen sizes */}
+        <div className="overflow-x-auto overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
+          <table className="w-full min-w-[500px]">
             <thead>
               <tr className="border-b border-border">
-                <th className="p-5 text-left text-base font-semibold text-foreground">Característica</th>
-                <th className="border-l border-r border-border bg-green-50 p-5 text-center text-base font-bold text-primary">Inverter Elétrico ÁGUIA HOT</th>
-                <th className="border-r border-border bg-red-50 p-5 text-center text-base font-semibold text-foreground">Solar</th>
-                <th className="bg-red-50 p-5 text-center text-base font-semibold text-foreground">Gás</th>
+                <th className="p-4 text-left text-base font-semibold text-foreground md:p-5">Característica</th>
+                <th className="border-l border-r border-border bg-green-50 p-4 text-center text-base font-bold text-primary md:p-5">Inverter Elétrico ÁGUIA HOT</th>
+                <th className="border-r border-border bg-red-50 p-4 text-center text-base font-semibold text-foreground md:p-5">Solar</th>
+                <th className="bg-red-50 p-4 text-center text-base font-semibold text-foreground md:p-5">Gás</th>
               </tr>
             </thead>
             <tbody>
               {rows.map((row, i) => (
                 <tr key={i} className={i % 2 === 0 ? "" : "bg-muted/30"}>
-                  <td className="p-5 text-base font-medium text-foreground">{row.feature}</td>
-                  <td className="border-l border-r border-border bg-green-50/60 p-4"><div className="flex justify-center"><StatusLabel {...row.inverter} /></div></td>
-                  <td className="border-r border-border bg-red-50/60 p-4"><div className="flex justify-center"><StatusLabel {...row.solar} /></div></td>
-                  <td className="bg-red-50/60 p-4"><div className="flex justify-center"><StatusLabel {...row.gas} /></div></td>
+                  <td className="p-4 text-base font-medium text-foreground md:p-5">{row.feature}</td>
+                  <td className="border-l border-r border-border bg-green-50/60 p-4 md:p-5"><div className="flex justify-center"><StatusLabel {...row.inverter} /></div></td>
+                  <td className="border-r border-border bg-red-50/60 p-4 md:p-5"><div className="flex justify-center"><StatusLabel {...row.solar} /></div></td>
+                  <td className="bg-red-50/60 p-4 md:p-5"><div className="flex justify-center"><StatusLabel {...row.gas} /></div></td>
                 </tr>
               ))}
             </tbody>
           </table>
-        </div>
-
-        {/* Mobile cards */}
-        <div className="space-y-3 md:hidden">
-          {rows.map((row, i) => (
-            <div key={i} className="rounded-xl border border-border bg-card p-4 shadow-sm">
-              <p className="mb-3 text-base font-semibold text-foreground">{row.feature}</p>
-              <div className="grid grid-cols-3 gap-2 text-center">
-                <div>
-                  <p className="mb-1 text-sm font-bold text-primary">Inverter Águia Hot</p>
-                  <div className="flex justify-center"><StatusLabel {...row.inverter} /></div>
-                </div>
-                <div>
-                  <p className="mb-1 text-sm text-muted-foreground">Solar</p>
-                  <div className="flex justify-center"><StatusLabel {...row.solar} /></div>
-                </div>
-                <div>
-                  <p className="mb-1 text-sm text-muted-foreground">Gás</p>
-                  <div className="flex justify-center"><StatusLabel {...row.gas} /></div>
-                </div>
-              </div>
-            </div>
-          ))}
         </div>
 
         <p className="mx-auto mt-8 max-w-2xl text-center text-lg leading-relaxed text-muted-foreground md:mt-10 md:text-xl">
@@ -91,7 +68,7 @@ const Comparison = () => {
         <div className="mt-8 text-center md:mt-10">
           <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer" className="relative inline-block w-full sm:w-auto">
             <span className="absolute inset-0 animate-ping rounded-md bg-secondary opacity-20" />
-            <Button size="lg" className="relative h-14 w-full gap-2 bg-secondary px-8 text-base font-bold text-secondary-foreground hover:bg-secondary/90 sm:w-auto">
+            <Button size="lg" className="relative h-14 w-full gap-2 bg-secondary px-8 text-lg font-bold text-secondary-foreground hover:bg-secondary/90 sm:w-auto">
               <WhatsAppIcon className="h-5 w-5" />
               Solicitar Orçamento Agora
             </Button>
