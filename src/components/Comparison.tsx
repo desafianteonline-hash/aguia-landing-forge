@@ -14,7 +14,7 @@ const StatusIcon = ({ status }: { status: Status }) => {
 const StatusLabel = ({ status, label }: { status: Status; label: string }) => (
   <div className="flex items-center gap-1.5">
     <StatusIcon status={status} />
-    <span className="text-sm">{label}</span>
+    <span className="text-base md:text-lg">{label}</span>
   </div>
 );
 
@@ -42,16 +42,16 @@ const Comparison = () => {
           <table className="w-full">
             <thead>
               <tr className="border-b border-border">
-                <th className="p-4 text-left text-sm font-semibold text-foreground">Característica</th>
-                <th className="border-l border-r border-border bg-green-50 p-4 text-center text-sm font-bold text-primary">Inverter Elétrico ÁGUIA HOT</th>
-                <th className="border-r border-border bg-red-50 p-4 text-center text-sm font-semibold text-foreground">Solar</th>
-                <th className="bg-red-50 p-4 text-center text-sm font-semibold text-foreground">Gás</th>
+                <th className="p-5 text-left text-base font-semibold text-foreground">Característica</th>
+                <th className="border-l border-r border-border bg-green-50 p-5 text-center text-base font-bold text-primary">Inverter Elétrico ÁGUIA HOT</th>
+                <th className="border-r border-border bg-red-50 p-5 text-center text-base font-semibold text-foreground">Solar</th>
+                <th className="bg-red-50 p-5 text-center text-base font-semibold text-foreground">Gás</th>
               </tr>
             </thead>
             <tbody>
               {rows.map((row, i) => (
                 <tr key={i} className={i % 2 === 0 ? "" : "bg-muted/30"}>
-                  <td className="p-4 text-sm font-medium text-foreground">{row.feature}</td>
+                  <td className="p-5 text-base font-medium text-foreground">{row.feature}</td>
                   <td className="border-l border-r border-border bg-green-50/60 p-4"><div className="flex justify-center"><StatusLabel {...row.inverter} /></div></td>
                   <td className="border-r border-border bg-red-50/60 p-4"><div className="flex justify-center"><StatusLabel {...row.solar} /></div></td>
                   <td className="bg-red-50/60 p-4"><div className="flex justify-center"><StatusLabel {...row.gas} /></div></td>
@@ -65,18 +65,18 @@ const Comparison = () => {
         <div className="space-y-3 md:hidden">
           {rows.map((row, i) => (
             <div key={i} className="rounded-xl border border-border bg-card p-4 shadow-sm">
-              <p className="mb-3 text-sm font-semibold text-foreground">{row.feature}</p>
+              <p className="mb-3 text-base font-semibold text-foreground">{row.feature}</p>
               <div className="grid grid-cols-3 gap-2 text-center">
                 <div>
-                  <p className="mb-1 text-xs font-bold text-primary">Inverter Águia Hot</p>
+                  <p className="mb-1 text-sm font-bold text-primary">Inverter Águia Hot</p>
                   <div className="flex justify-center"><StatusLabel {...row.inverter} /></div>
                 </div>
                 <div>
-                  <p className="mb-1 text-xs text-muted-foreground">Solar</p>
+                  <p className="mb-1 text-sm text-muted-foreground">Solar</p>
                   <div className="flex justify-center"><StatusLabel {...row.solar} /></div>
                 </div>
                 <div>
-                  <p className="mb-1 text-xs text-muted-foreground">Gás</p>
+                  <p className="mb-1 text-sm text-muted-foreground">Gás</p>
                   <div className="flex justify-center"><StatusLabel {...row.gas} /></div>
                 </div>
               </div>
@@ -84,7 +84,7 @@ const Comparison = () => {
           ))}
         </div>
 
-        <p className="mx-auto mt-8 max-w-2xl text-center text-sm leading-relaxed text-muted-foreground md:mt-10 md:text-base">
+        <p className="mx-auto mt-8 max-w-2xl text-center text-lg leading-relaxed text-muted-foreground md:mt-10 md:text-xl">
           O sistema inverter oferece o melhor equilíbrio entre economia, conforto e praticidade, sendo ideal para quem quer usar a piscina com frequência.
         </p>
 
