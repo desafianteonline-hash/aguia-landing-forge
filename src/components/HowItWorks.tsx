@@ -29,10 +29,10 @@ const HowItWorks = () => {
     <section id="como-funciona" className="px-5 py-14 md:px-4 md:py-28">
       <div className="container mx-auto max-w-5xl">
         <div className="mb-8 text-center md:mb-14">
-          <h2 className="mb-3 text-3xl font-extrabold leading-tight text-foreground md:mb-4 md:text-5xl">
+          <h2 className="mb-4 text-4xl font-extrabold leading-tight text-foreground md:mb-6 md:text-5xl">
             Como funcionam os aquecedores <span className="text-secondary">Águia Hot</span>
           </h2>
-          <p className="mx-auto max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
+          <p className="mx-auto max-w-2xl text-lg leading-relaxed text-muted-foreground md:text-xl">
             O aquecedor elétrico inverter capta o calor do ar e transfere para a água da piscina, aquecendo de forma eficiente e econômica. Ele ajusta automaticamente o funcionamento para manter a temperatura estável, evitando desperdício de energia.
           </p>
         </div>
