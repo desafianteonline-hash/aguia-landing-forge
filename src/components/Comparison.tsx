@@ -14,7 +14,7 @@ const StatusIcon = ({ status }: { status: Status }) => {
 const StatusLabel = ({ status, label }: { status: Status; label: string }) => (
   <div className="flex items-center gap-1.5">
     <StatusIcon status={status} />
-    <span className="text-sm">{label}</span>
+    <span className="text-base md:text-lg">{label}</span>
   </div>
 );
 
