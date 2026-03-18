@@ -65,18 +65,18 @@ const Comparison = () => {
         <div className="space-y-3 md:hidden">
           {rows.map((row, i) => (
             <div key={i} className="rounded-xl border border-border bg-card p-4 shadow-sm">
-              <p className="mb-3 text-sm font-semibold text-foreground">{row.feature}</p>
+              <p className="mb-3 text-base font-semibold text-foreground">{row.feature}</p>
               <div className="grid grid-cols-3 gap-2 text-center">
                 <div>
-                  <p className="mb-1 text-xs font-bold text-primary">Inverter Águia Hot</p>
+                  <p className="mb-1 text-sm font-bold text-primary">Inverter Águia Hot</p>
                   <div className="flex justify-center"><StatusLabel {...row.inverter} /></div>
                 </div>
                 <div>
-                  <p className="mb-1 text-xs text-muted-foreground">Solar</p>
+                  <p className="mb-1 text-sm text-muted-foreground">Solar</p>
                   <div className="flex justify-center"><StatusLabel {...row.solar} /></div>
                 </div>
                 <div>
-                  <p className="mb-1 text-xs text-muted-foreground">Gás</p>
+                  <p className="mb-1 text-sm text-muted-foreground">Gás</p>
                   <div className="flex justify-center"><StatusLabel {...row.gas} /></div>
                 </div>
               </div>
