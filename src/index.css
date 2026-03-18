@@ -59,6 +59,10 @@
     font-family: 'Plus Jakarta Sans', sans-serif;
   }
 
+  h1, h2 {
+    text-transform: uppercase;
+  }
+
   html {
     scroll-behavior: smooth;
     overflow-x: hidden;

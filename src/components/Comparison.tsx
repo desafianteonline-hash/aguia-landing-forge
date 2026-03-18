@@ -43,7 +43,7 @@ const Comparison = () => {
             <thead>
               <tr className="border-b border-border bg-primary/5">
                 <th className="p-4 text-left text-sm font-semibold text-foreground">Característica</th>
-                <th className="p-4 text-center text-sm font-bold text-primary">Inverter Elétrico</th>
+                <th className="p-4 text-center text-sm font-bold text-primary">Inverter Elétrico ÁGUIA HOT</th>
                 <th className="p-4 text-center text-sm font-semibold text-foreground">Solar</th>
                 <th className="p-4 text-center text-sm font-semibold text-foreground">Gás</th>
               </tr>
