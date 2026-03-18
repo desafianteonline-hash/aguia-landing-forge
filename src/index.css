@@ -66,8 +66,9 @@
     line-height: 1.1;
   }
 
-  p, li, span, td, th {
+  p, li, span, td, th, label {
     line-height: 1.8;
+    font-size: clamp(1.125rem, 2.5vw, 1.375rem);
   }
 
   html {
