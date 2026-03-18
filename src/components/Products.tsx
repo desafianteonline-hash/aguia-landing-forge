@@ -97,7 +97,7 @@ const Products = () => {
         <div className="mt-8 text-center md:mt-10">
           <a href={getWhatsAppUrl("Olá! Quero saber qual aquecedor é ideal para minha piscina 🏊")} target="_blank" rel="noopener noreferrer" className="relative inline-block w-full sm:w-auto">
             <span className="absolute inset-0 animate-ping rounded-md bg-secondary opacity-20" />
-            <Button size="lg" className="relative h-14 w-full gap-2 bg-secondary px-8 text-base font-bold text-secondary-foreground shadow-lg hover:bg-secondary/90 sm:w-auto">
+            <Button size="lg" className="relative h-auto min-h-14 w-full gap-2 bg-secondary px-6 py-4 text-base font-bold text-secondary-foreground shadow-lg hover:bg-secondary/90 sm:w-auto sm:px-8">
               <WhatsAppIcon className="h-8 w-8" />
               Quero Saber Qual é o Ideal para Minha Piscina
             </Button>
