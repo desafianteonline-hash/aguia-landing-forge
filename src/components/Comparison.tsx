@@ -84,7 +84,7 @@ const Comparison = () => {
           ))}
         </div>
 
-        <p className="mx-auto mt-8 max-w-2xl text-center text-sm leading-relaxed text-muted-foreground md:mt-10 md:text-base">
+        <p className="mx-auto mt-8 max-w-2xl text-center text-lg leading-relaxed text-muted-foreground md:mt-10 md:text-xl">
           O sistema inverter oferece o melhor equilíbrio entre economia, conforto e praticidade, sendo ideal para quem quer usar a piscina com frequência.
         </p>
 
